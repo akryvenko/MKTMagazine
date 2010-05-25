@@ -9,6 +9,7 @@
      <c:param name="action" value="register"/>
 </c:url>
 
+
 <html:html>
   <head>
       <title>Створення Замовника</title>
