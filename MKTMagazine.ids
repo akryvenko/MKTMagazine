@@ -1,0 +1,134 @@
+<?xml version="1.0"?><component name="dataSourceStorage">
+  <data-source source="LOCAL" name="DataSource" product="PostgreSQL" version="8.4.3" uuid="64bf6572-ed94-4de1-9006-0c25b68b2753">
+    <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+    <jdbc-url>jdbc:postgresql://localhost/test1</jdbc-url>
+    <user-name>postgres</user-name>
+    <user-password>dfd8dfc5dfc5dfde</user-password>
+    <libraries>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/postgresql-8.3-604.jdbc4.jar!/</url>
+      </library>
+    </libraries>
+    <table name="cust_id_seq" schema="public" catalog="" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" length="2147483647" precision="0" nullable="false" jdbcType="12" />
+      <column name="last_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="start_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="increment_by" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="max_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="min_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="cache_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="log_cnt" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="is_cycled" sqlType="bool" length="1" precision="0" nullable="false" jdbcType="-7" />
+      <column name="is_called" sqlType="bool" length="1" precision="0" nullable="false" jdbcType="-7" />
+    </table>
+    <table name="customers" schema="public" catalog="" type="TABLE">
+      <column name="cust_id" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="cust_name" sqlType="varchar" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="cust_credit" sqlType="numeric" length="19" precision="2" nullable="true" jdbcType="2" />
+      <column name="cust_emp" sqlType="int8" length="19" precision="0" nullable="true" jdbcType="-5" />
+      <primary-key name="customers_pkey" columns="cust_id" />
+      <foreign-key name="fk600e7c55f6c3f394" columns="cust_emp" ref-table="employees" ref-schema="public" ref-catalog="" ref-columns="emp_id" />
+    </table>
+    <table name="emp_id_seq" schema="public" catalog="" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" length="2147483647" precision="0" nullable="false" jdbcType="12" />
+      <column name="last_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="start_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="increment_by" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="max_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="min_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="cache_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="log_cnt" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="is_cycled" sqlType="bool" length="1" precision="0" nullable="false" jdbcType="-7" />
+      <column name="is_called" sqlType="bool" length="1" precision="0" nullable="false" jdbcType="-7" />
+    </table>
+    <table name="employees" schema="public" catalog="" type="TABLE">
+      <column name="emp_id" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="emp_name" sqlType="varchar" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="emp_sales" sqlType="numeric" length="19" precision="2" nullable="true" jdbcType="2" />
+      <column name="emp_age" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="emp_title" sqlType="varchar" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="emp_quota" sqlType="numeric" length="19" precision="2" nullable="true" jdbcType="2" />
+      <column name="emp_off" sqlType="int8" length="19" precision="0" nullable="true" jdbcType="-5" />
+      <column name="emp_manager" sqlType="int8" length="19" precision="0" nullable="true" jdbcType="-5" />
+      <primary-key name="employees_pkey" columns="emp_id" />
+      <foreign-key name="fk9d39ef859df0cb71" columns="emp_off" ref-table="office" ref-schema="public" ref-catalog="" ref-columns="off_id" />
+      <foreign-key name="fk9d39ef853072cdee" columns="emp_manager" ref-table="employees" ref-schema="public" ref-catalog="" ref-columns="emp_id" />
+    </table>
+    <table name="off_id_seq" schema="public" catalog="" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" length="2147483647" precision="0" nullable="false" jdbcType="12" />
+      <column name="last_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="start_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="increment_by" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="max_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="min_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="cache_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="log_cnt" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="is_cycled" sqlType="bool" length="1" precision="0" nullable="false" jdbcType="-7" />
+      <column name="is_called" sqlType="bool" length="1" precision="0" nullable="false" jdbcType="-7" />
+    </table>
+    <table name="office" schema="public" catalog="" type="TABLE">
+      <column name="off_id" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="off_target" sqlType="numeric" length="19" precision="2" nullable="true" jdbcType="2" />
+      <column name="off_region" sqlType="varchar" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="off_city" sqlType="varchar" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="off_sales" sqlType="numeric" length="19" precision="2" nullable="true" jdbcType="2" />
+      <column name="off_manager" sqlType="int8" length="19" precision="0" nullable="true" jdbcType="-5" />
+      <primary-key name="office_pkey" columns="off_id" />
+      <foreign-key name="fkc3373ebc88b35b95" columns="off_manager" ref-table="employees" ref-schema="public" ref-catalog="" ref-columns="emp_id" />
+    </table>
+    <table name="ord_id_seq" schema="public" catalog="" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" length="2147483647" precision="0" nullable="false" jdbcType="12" />
+      <column name="last_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="start_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="increment_by" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="max_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="min_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="cache_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="log_cnt" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="is_cycled" sqlType="bool" length="1" precision="0" nullable="false" jdbcType="-7" />
+      <column name="is_called" sqlType="bool" length="1" precision="0" nullable="false" jdbcType="-7" />
+    </table>
+    <table name="orders" schema="public" catalog="" type="TABLE">
+      <column name="ord_id" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="ord_date" sqlType="timestamp" length="29" precision="6" nullable="true" jdbcType="93" />
+      <column name="ord_amount" sqlType="numeric" length="19" precision="2" nullable="true" jdbcType="2" />
+      <column name="ord_employee" sqlType="int8" length="19" precision="0" nullable="true" jdbcType="-5" />
+      <column name="ord_cust" sqlType="int8" length="19" precision="0" nullable="true" jdbcType="-5" />
+      <column name="ord_product" sqlType="int8" length="19" precision="0" nullable="true" jdbcType="-5" />
+      <primary-key name="orders_pkey" columns="ord_id" />
+      <foreign-key name="fkc3df62e5f8df64cc" columns="ord_cust" ref-table="customers" ref-schema="public" ref-catalog="" ref-columns="cust_id" />
+      <foreign-key name="fkc3df62e5e0511ae3" columns="ord_product" ref-table="products" ref-schema="public" ref-catalog="" ref-columns="prod_id" />
+      <foreign-key name="fkc3df62e52fc06d04" columns="ord_employee" ref-table="employees" ref-schema="public" ref-catalog="" ref-columns="emp_id" />
+    </table>
+    <table name="prod_id_seq" schema="public" catalog="" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" length="2147483647" precision="0" nullable="false" jdbcType="12" />
+      <column name="last_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="start_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="increment_by" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="max_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="min_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="cache_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="log_cnt" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="is_cycled" sqlType="bool" length="1" precision="0" nullable="false" jdbcType="-7" />
+      <column name="is_called" sqlType="bool" length="1" precision="0" nullable="false" jdbcType="-7" />
+    </table>
+    <table name="products" schema="public" catalog="" type="TABLE">
+      <column name="prod_id" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="prod_descript" sqlType="varchar" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="prod_price" sqlType="numeric" length="19" precision="2" nullable="true" jdbcType="2" />
+      <primary-key name="products_pkey" columns="prod_id" />
+    </table>
+    <table name="user_id_seq" schema="public" catalog="" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" length="2147483647" precision="0" nullable="false" jdbcType="12" />
+      <column name="last_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="start_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="increment_by" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="max_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="min_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="cache_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="log_cnt" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="is_cycled" sqlType="bool" length="1" precision="0" nullable="false" jdbcType="-7" />
+      <column name="is_called" sqlType="bool" length="1" precision="0" nullable="false" jdbcType="-7" />
+    </table>
+  </data-source>
+</component>

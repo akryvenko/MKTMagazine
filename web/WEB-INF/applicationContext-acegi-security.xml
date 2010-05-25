@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+	<bean id="filterChainProxy" class="org.acegisecurity.util.FilterChainProxy">
+      <property name="filterInvocationDefinitionSource">
+         <value><![CDATA[
+		    CONVERT_URL_TO_LOWERCASE_BEFORE_COMPARISON
+		    PATTERN_TYPE_APACHE_ANT
+            /**=httpSessionContextIntegrationFilter,logoutFilter,authenticationProcessingFilter,basicProcessingFilter,securityContextHolderAwareRequestFilter,rememberMeProcessingFilter,anonymousProcessingFilter,exceptionTranslationFilter,filterInvocationInterceptor
+         ]]></value>
+      </property>
+    </bean>
+
+   <!-- ======================== AUTHENTICATION ======================= -->
+
+   <bean id="authenticationManager" class="org.acegisecurity.providers.ProviderManager">
+      <property name="providers">
+         <list>
+            <ref local="daoAuthenticationProvider"/>
+            <ref local="anonymousAuthenticationProvider"/>
+             <ref local="rememberMeAuthenticationProvider"/>
+         </list>
+      </property>
+   </bean>
+
+   <bean id="daoAuthenticationProvider" class="org.acegisecurity.providers.dao.DaoAuthenticationProvider">
+      <property name="userDetailsService"><ref local="userDetailsService"/></property>
+   </bean>
+
+   <bean id="loggerListener" class="org.acegisecurity.event.authentication.LoggerListener"/>
+
+   <bean id="basicProcessingFilter" class="org.acegisecurity.ui.basicauth.BasicProcessingFilter">
+      <property name="authenticationManager"><ref local="authenticationManager"/></property>
+      <property name="authenticationEntryPoint"><ref local="basicProcessingFilterEntryPoint"/></property>
+   </bean>
+
+   <bean id="basicProcessingFilterEntryPoint" class="org.acegisecurity.ui.basicauth.BasicProcessingFilterEntryPoint">
+      <property name="realmName"><value>Contacts Realm</value></property>
+   </bean>
+
+   <bean id="anonymousProcessingFilter" class="org.acegisecurity.providers.anonymous.AnonymousProcessingFilter">
+      <property name="key"><value>foobar</value></property>
+      <property name="userAttribute"><value>anonymousUser,ROLE_ANONYMOUS</value></property>
+   </bean>
+
+   <bean id="anonymousAuthenticationProvider" class="org.acegisecurity.providers.anonymous.AnonymousAuthenticationProvider">
+      <property name="key"><value>foobar</value></property>
+   </bean>
+
+   <bean id="httpSessionContextIntegrationFilter" class="org.acegisecurity.context.HttpSessionContextIntegrationFilter">
+   </bean>
+
+   <bean id="rememberMeProcessingFilter" class="org.acegisecurity.ui.rememberme.RememberMeProcessingFilter">
+      <property name="authenticationManager"><ref local="authenticationManager"/></property>
+      <property name="rememberMeServices"><ref local="rememberMeServices"/></property>
+   </bean>
+
+   <bean id="rememberMeServices" class="org.acegisecurity.ui.rememberme.TokenBasedRememberMeServices">
+      <property name="userDetailsService"><ref local="userDetailsService"/></property>
+      <property name="key"><value>springRocks</value></property>
+   </bean>
+
+   <bean id="rememberMeAuthenticationProvider" class="org.acegisecurity.providers.rememberme.RememberMeAuthenticationProvider">
+      <property name="key"><value>springRocks</value></property>
+   </bean>
+
+   <bean id="logoutFilter" class="org.acegisecurity.ui.logout.LogoutFilter">
+      <constructor-arg value="/index.jsp"/> <!-- URL redirected to after logout -->
+      <constructor-arg>
+         <list>
+              <ref bean="rememberMeServices"/>
+              <bean class="org.acegisecurity.ui.logout.SecurityContextLogoutHandler"/>
+         </list>
+      </constructor-arg>
+   </bean>
+
+   <bean id="securityContextHolderAwareRequestFilter" class="org.acegisecurity.wrapper.SecurityContextHolderAwareRequestFilter"/>
+
+   <!-- ===================== HTTP REQUEST SECURITY ==================== -->
+
+   <bean id="exceptionTranslationFilter" class="org.acegisecurity.ui.ExceptionTranslationFilter">
+      <property name="authenticationEntryPoint"><ref local="authenticationProcessingFilterEntryPoint"/></property>
+      <property name="accessDeniedHandler">
+      	<bean class="org.acegisecurity.ui.AccessDeniedHandlerImpl">
+      		<property name="errorPage" value="/accessDenied.jsp"/>
+      	</bean>
+      </property>
+   </bean>
+
+   <bean id="authenticationProcessingFilter" class="org.acegisecurity.ui.webapp.AuthenticationProcessingFilter">
+      <property name="authenticationManager"><ref bean="authenticationManager"/></property>
+      <property name="authenticationFailureUrl"><value>/acegilogin.jsp?login_error=1</value></property>
+      <property name="defaultTargetUrl"><value>/</value></property>
+      <property name="filterProcessesUrl"><value>/j_acegi_security_check</value></property>
+      <property name="rememberMeServices"><ref local="rememberMeServices"/></property>
+   </bean>
+
+   <bean id="authenticationProcessingFilterEntryPoint" class="org.acegisecurity.ui.webapp.AuthenticationProcessingFilterEntryPoint">
+      <property name="loginFormUrl"><value>/acegilogin.jsp</value></property>
+      <property name="forceHttps"><value>false</value></property>
+   </bean>
+
+   <bean id="httpRequestAccessDecisionManager" class="org.acegisecurity.vote.AffirmativeBased">
+      <property name="allowIfAllAbstainDecisions"><value>false</value></property>
+      <property name="decisionVoters">
+         <list>
+             <bean class="org.acegisecurity.vote.RoleVoter"/>
+             <bean class="org.acegisecurity.vote.AuthenticatedVoter"/>
+         </list>
+      </property>
+   </bean>
+   
+   <bean id="filterInvocationInterceptor" class="org.acegisecurity.intercept.web.FilterSecurityInterceptor">
+      <property name="authenticationManager"><ref bean="authenticationManager"/></property>
+      <property name="accessDecisionManager"><ref local="httpRequestAccessDecisionManager"/></property>
+      <property name="objectDefinitionSource">
+         <value><![CDATA[
+			    CONVERT_URL_TO_LOWERCASE_BEFORE_COMPARISON
+			    PATTERN_TYPE_APACHE_ANT
+			    /customer/**=ROLE_CUSTOMER
+				/**=ROLE_ANONYMOUS,ROLE_PRODUCT_MANAGER,ROLE_CUSTOMER,ROLE_MANAGER
+         ]]></value>
+      </property>
+   </bean>
+
+   <bean id="userDetailsService" class="com.mariya.dao.UserDetailsService">
+      <property name="dataSource"><ref bean="theDataSource"/></property>
+        <property name="usersByUsernameQuery"><value>SELECT username,password,enabled FROM users where username = ?</value></property>
+        <property name="authoritiesByUsernameQuery"><value>SELECT username,authority FROM users, authorities where authority_id = authorities.id AND username = ?</value></property>
+        <property name="customerDAO"><ref bean="customerDAO"/></property>
+   </bean>
+
+   <import resource="applicationContext.xml"/>
+
+</beans>

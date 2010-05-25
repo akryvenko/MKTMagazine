@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="theDataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="org.postgresql.Driver"/>
+        <property name="url" value="jdbc:postgresql://localhost/test1"/>
+        <property name="username" value="postgres"/>
+        <property name="password" value="root"/>
+    </bean>
+
+    <!-- Hibernate session factory -->
+    <bean id="theSessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+        <property name="dataSource">
+            <ref bean="theDataSource"/>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.DerbyDialect</prop>
+                <prop key="show_sql">true</prop>
+                <prop key="hibernate.hbm2ddl.auto">update</prop>
+            </props>
+        </property>
+        <property name="annotatedClasses">
+            <list>
+                <value>com.mariya.entity.User</value>
+                <value>com.mariya.entity.Authority</value>
+                <value>com.mariya.entity.Customer</value>
+                <value>com.mariya.entity.Office</value>
+                <value>com.mariya.entity.Employer</value>
+                <value>com.mariya.entity.Order</value>
+                <value>com.mariya.entity.Product</value>
+
+            </list>
+        </property>
+    </bean>
+
+    <bean name="productDAO" class="com.mariya.dao.ProductDAO">
+        <property name="sessionFactory" ref="theSessionFactory"/>
+    </bean>
+
+    <bean name="officeDAO" class="com.mariya.dao.OfficeDAO">
+        <property name="sessionFactory" ref="theSessionFactory"/>
+    </bean>
+
+    <bean name="employerDAO" class="com.mariya.dao.EmployerDAO">
+        <property name="sessionFactory" ref="theSessionFactory"/>
+    </bean>
+
+    <bean name="customerDAO" class="com.mariya.dao.CustomerDAO">
+        <property name="sessionFactory" ref="theSessionFactory"/>
+    </bean>
+
+    <bean name="orderDAO" class="com.mariya.dao.OrderDAO">
+        <property name="sessionFactory" ref="theSessionFactory"/>
+    </bean>
+
+    <bean name="statisticDAO" class="com.mariya.dao.StatisticDAO">
+        <property name="sessionFactory" ref="theSessionFactory"/>
+    </bean>
+
+    <bean name="userDAO" class="com.mariya.dao.UserDAO">
+        <property name="sessionFactory" ref="theSessionFactory"/>
+    </bean>
+
+</beans>
