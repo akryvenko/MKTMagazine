@@ -1,7 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
 <%@ taglib prefix="s" uri="/struts-tags" %>
-<%@ taglib uri="http://jakarta.apache.org/struts/tags-bean" prefix="bean"%>
-<%@ taglib uri="http://jakarta.apache.org/struts/tags-html" prefix="html"%>
+<%@ taglib uri="http://struts.apache.org/tags-bean" prefix="bean"%>
+<%@ taglib uri="http://struts.apache.org/tags-html" prefix="html"%>
 
 <%@ page contentType="text/html;charset=WINDOWS-1251" language="java" %>
 
@@ -17,6 +17,10 @@
   <body>
     <div class="body">
         <h1>Інформація по замовнику</h1>
+        <html:messages id="errors">
+				<bean:write name="errors" />
+				<br />
+        </html:messages>
         <form name="customerForm" action="<c:out value="${saveCustomerUrl}"/>" method="POST" >
         <input type="hidden" name="id"/>
         <table>
@@ -47,7 +51,4 @@
         </form>
     </div>
   </body>
-  <html:form action="/customer">
-  <html:submit value = "test"/>
-  </html:form>
 </html:html>

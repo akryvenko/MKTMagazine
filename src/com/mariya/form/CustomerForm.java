@@ -3,11 +3,12 @@ package com.mariya.form;
 import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionMapping;
+import org.apache.struts.validator.DynaValidatorForm;
 
 import javax.servlet.ServletRequest;
 import java.math.BigDecimal;
 
-public class CustomerForm extends ActionForm {
+public class CustomerForm extends DynaValidatorForm {
 
     private Long id;
     private String firstName;

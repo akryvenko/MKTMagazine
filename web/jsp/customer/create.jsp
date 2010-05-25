@@ -1,5 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
 <%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ taglib prefix="html" uri="http://struts.apache.org/tags-html" %>
 <%@ page contentType="text/html;charset=WINDOWS-1251" language="java" %>
 
 <jsp:useBean id="employers" scope="request" type="java.util.Collection"/>
@@ -8,14 +9,14 @@
      <c:param name="action" value="save"/>
 </c:url>
 
-<html>
+<html:html>
   <head>
       <title>Створення Замовника</title>
   </head>
   <body>
     <div class="body">
         <h1>Інформація по замовнику</h1>
-        <form name="customerForm" action="<c:out value="${saveCustomerUrl}"/>" method="POST" >
+        <html:form action="<c:out value='${saveCustomerUrl}'/>">
         <input type="hidden" name="id"/>
         <table>
             <tr class="prop">
@@ -44,7 +45,7 @@
           <div class="buttons">
               <span class="button"><input class="save" type="submit" value="Зберегти" /></span>
 		  </div>
-        </form>
+        </html:form>
     </div>
   </body>
-</html>
+</html:html>

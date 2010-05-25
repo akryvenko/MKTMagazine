@@ -15,17 +15,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="21a3733a-d43e-4f62-b331-730144e5e426" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mariya/form/ProductForm.java" afterPath="$PROJECT_DIR$/src/com/mariya/form/ProductForm.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/validation.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jsp/customer/create.jsp" afterPath="$PROJECT_DIR$/web/jsp/customer/create.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/struts-config.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/struts-config.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MKTMagazine.iws" afterPath="$PROJECT_DIR$/MKTMagazine.iws" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/strutsmessage.properties" afterPath="$PROJECT_DIR$/src/strutsmessage.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jsp/customer/register.jsp" afterPath="$PROJECT_DIR$/web/jsp/customer/register.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mariya/form/CustomerForm.java" afterPath="$PROJECT_DIR$/src/com/mariya/form/CustomerForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MKTMagazine.ipr" afterPath="$PROJECT_DIR$/MKTMagazine.ipr" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/MessageResources.properties" />
     </list>
-    <ignored path="$USER_HOME_GRAILS$/" />
-    <ignored path="MKTMagazine.iws" />
-    <ignored path="$USER_HOME_GRIFFON$/" />
     <ignored path=".idea/workspace.xml" />
+    <ignored path="MKTMagazine.iws" />
+    <ignored path="$USER_HOME_GRAILS$/" />
+    <ignored path="$USER_HOME_GRIFFON$/" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +75,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/mariya/form/CustomerForm.java" line="20" class="com.mariya.form.CustomerForm" package="com.mariya.form">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/mariya/form/CustomerForm.java" line="21" class="com.mariya.form.CustomerForm" package="com.mariya.form">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -128,10 +130,10 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="strutsmessage.properties" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="strutsmessage.properties" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/strutsmessage.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="17" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0">
+            <state line="30" column="0" selection-start="0" selection-end="1486" vertical-scroll-proportion="0.8862876">
               <folding />
             </state>
           </provider>
@@ -146,10 +148,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="register.jsp" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="register.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/jsp/customer/register.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="49" selection-start="230" selection-end="239" vertical-scroll-proportion="0.15644172">
+            <state line="22" column="8" selection-start="658" selection-end="658" vertical-scroll-proportion="-8.84">
               <folding />
             </state>
           </provider>
@@ -157,30 +159,68 @@
       </file>
       <file leaf-file-name="struts-config.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/struts-config.xml">
+          <provider editor-type-id="com.intellij.struts.diagram.DiagramEditorProvider">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="31" selection-start="2781" selection-end="2790" vertical-scroll-proportion="-4.45">
+            <state line="79" column="8" selection-start="3400" selection-end="3400" vertical-scroll-proportion="-24.45">
               <folding />
             </state>
           </provider>
-          <provider editor-type-id="com.intellij.struts.diagram.DiagramEditorProvider">
-            <state />
+        </entry>
+      </file>
+      <file leaf-file-name="MessageResources.properties" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MessageResources.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="31" selection-start="0" selection-end="1486" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/jsp/customer/create.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="58" selection-start="507" selection-end="507" vertical-scroll-proportion="-8.16">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="validation.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/validation.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="53" selection-start="302" selection-end="302" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomerForm.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mariya/form/CustomerForm.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="49" selection-start="334" selection-end="334" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="web.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
+          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
             <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="48" column="0" selection-start="1622" selection-end="1622" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
           </provider>
           <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
             <state />
           </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="0" selection-start="1622" selection-end="1622" vertical-scroll-proportion="-2.2666667">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
+          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
             <state />
           </provider>
         </entry>
@@ -198,8 +238,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/web/jsp/welcome.jsp" />
-        <option value="$PROJECT_DIR$/web/jsp/employer/list.jsp" />
         <option value="$PROJECT_DIR$/web/jsp/product/list.jsp" />
         <option value="$PROJECT_DIR$/web/jsp/customer/edit.jsp" />
         <option value="$PROJECT_DIR$/web/jsp/customer/settings.jsp" />
@@ -207,13 +245,15 @@
         <option value="$PROJECT_DIR$/src/com/mariya/action/OrderAction.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/validator.xml" />
         <option value="$PROJECT_DIR$/web/WEB-INF/validator-rules.xml" />
-        <option value="$PROJECT_DIR$/src/strutsmessage.properties" />
         <option value="$PROJECT_DIR$/src/com/mariya/form/ProductForm.java" />
-        <option value="$PROJECT_DIR$/src/com/mariya/form/CustomerForm.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/struts-config.xml" />
         <option value="$PROJECT_DIR$/src/com/mariya/action/CustomerAction.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/com/mariya/form/CustomerForm.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/validation.xml" />
+        <option value="$PROJECT_DIR$/web/jsp/customer/create.jsp" />
         <option value="$PROJECT_DIR$/web/jsp/customer/register.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/struts-config.xml" />
+        <option value="$PROJECT_DIR$/src/strutsmessage.properties" />
       </list>
     </option>
   </component>
@@ -279,8 +319,8 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="Favorites" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -331,7 +371,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemId" value="jsp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MKTMagazine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MKTMagazine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jsp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="customer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -364,6 +426,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="mariya" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MKTMagazine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MKTMagazine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mariya" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="form" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -395,7 +479,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
@@ -410,9 +494,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -560,13 +644,10 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
-      <deployment />
-      <server-settings>
-        <option name="DEPLOY_TOMCAT_MANAGER" value="false" />
-        <option name="BASE_DIRECTORY_NAME" value="" />
-      </server-settings>
-      <predefined_log_file id="TOMCAT_LOCALHOST_LOG_ID" enabled="true" />
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -574,10 +655,13 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
-      <option name="VM_PARAMETERS" value="" />
-      <option name="USER_CFG_CLASS" />
-      <option name="CONTEXT_PROVIDER" />
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
+      <deployment />
+      <server-settings>
+        <option name="DEPLOY_TOMCAT_MANAGER" value="false" />
+        <option name="BASE_DIRECTORY_NAME" value="" />
+      </server-settings>
+      <predefined_log_file id="TOMCAT_LOCALHOST_LOG_ID" enabled="true" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -601,31 +685,11 @@
       </server-settings>
       <log_file path="C:/Documents and Settings/user/.IntelliJIdea8x/system/tomcat/Unnamed_MKTMagazinebbaae021/logs/localhost*" checked="true" skipped="true" show_all="false" alias="Tomcat Log" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="4282" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="2022" />
         <option name="TRANSPORT" value="0" />
         <option name="LOCAL" value="true" />
       </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
         <option name="USE_ENV_VARIABLES" value="true" />
         <STARTUP>
@@ -728,14 +792,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1032" height="742" extended-state="0" />
+    <frame x="-5" y="0" width="1032" height="742" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2587269" sideWeight="0.80269814" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48735243" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3524452" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.325462" sideWeight="0.17706576" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38785836" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.116357505" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Struts Assistant" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32927817" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35075885" sideWeight="0.0" order="3" side_tool="false" content_ui="tabs" />
@@ -749,8 +813,8 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295688" sideWeight="0.63743675" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35075885" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3295688" sideWeight="0.6357504" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.11467116" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Dataflow to this" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -840,100 +904,34 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="729" column="33" selection-start="12590" selection-end="12590" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/jsp/welcome.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="31" selection-start="2799" selection-end="2799" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mariya/action/OrderAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="61" selection-start="651" selection-end="651" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mariya/entity/Customer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/struts-core-1.3.5.jar!/org/apache/struts/action/DynaActionForm.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="20" selection-start="169" selection-end="169" vertical-scroll-proportion="-2.8333333">
-          <folding />
-        </state>
+        <state line="5" column="20" selection-start="169" selection-end="169" vertical-scroll-proportion="-2.8333333" />
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/lib/struts-core-1.3.5.jar!/org/apache/struts/validator/DynaValidatorForm.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="20" selection-start="172" selection-end="172" vertical-scroll-proportion="0.33082706">
-          <folding />
-        </state>
+        <state line="5" column="20" selection-start="172" selection-end="172" vertical-scroll-proportion="0.33082706" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mariya/form/ProductForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="24" selection-start="428" selection-end="428" vertical-scroll-proportion="0.3297414">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/struts-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="31" selection-start="2781" selection-end="2790" vertical-scroll-proportion="-4.45">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.struts.diagram.DiagramEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mariya/form/CustomerForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="44" selection-start="265" selection-end="275" vertical-scroll-proportion="-0.35951662">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="15" column="24" selection-start="428" selection-end="428" vertical-scroll-proportion="0.3297414" />
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/lib/struts-core-1.3.5.jar!/org/apache/struts/action/ActionForm.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="49" selection-start="1525" selection-end="1525" vertical-scroll-proportion="1.0456026">
-          <folding />
-        </state>
+        <state line="27" column="49" selection-start="1525" selection-end="1525" vertical-scroll-proportion="1.0456026" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mariya/utils/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="65" selection-start="3988" selection-end="3996" vertical-scroll-proportion="0.5724382">
-          <folding />
-        </state>
+        <state line="110" column="65" selection-start="3988" selection-end="3996" vertical-scroll-proportion="0.5724382" />
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/lib/commons-chain-1.1.jar!/org/apache/commons/chain/impl/ChainBase.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="19" selection-start="759" selection-end="759" vertical-scroll-proportion="0.5645757">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/strutsmessage.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="17" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="19" column="19" selection-start="759" selection-end="759" vertical-scroll-proportion="0.5645757" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mariya/action/CustomerAction.java">
@@ -944,24 +942,78 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
         <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="0" selection-start="1622" selection-end="1622" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
       <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
         <state />
       </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/struts-core-1.3.5.jar!/org/apache/struts/validator/validator-rules.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="0" selection-start="1622" selection-end="1622" vertical-scroll-proportion="-2.2666667">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
-        <state />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mariya/form/CustomerForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="49" selection-start="334" selection-end="334" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/validation.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="53" selection-start="302" selection-end="302" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/jsp/customer/create.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="58" selection-start="507" selection-end="507" vertical-scroll-proportion="-8.16">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/jsp/customer/register.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="49" selection-start="230" selection-end="239" vertical-scroll-proportion="0.15644172">
+        <state line="22" column="8" selection-start="658" selection-end="658" vertical-scroll-proportion="-8.84">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/struts-config.xml">
+      <provider editor-type-id="com.intellij.struts.diagram.DiagramEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="8" selection-start="3400" selection-end="3400" vertical-scroll-proportion="-24.45">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MessageResources.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="31" selection-start="0" selection-end="1486" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/strutsmessage.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="0" selection-start="0" selection-end="1486" vertical-scroll-proportion="0.8862876">
           <folding />
         </state>
       </provider>

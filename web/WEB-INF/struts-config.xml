@@ -9,7 +9,9 @@
         <form-bean name="productForm" type="com.mariya.form.ProductForm"/>
         <form-bean name="officeForm" type="com.mariya.form.OfficeForm"/>
         <form-bean name="employerForm" type="com.mariya.form.EmployerForm"/>
-        <form-bean name="customerForm" type="com.mariya.form.CustomerForm"/>
+        <form-bean name="customerForm" type="com.mariya.form.CustomerForm">
+            <form-property name="firstName" type="java.lang.String"/>
+        </form-bean>
         <form-bean name="orderForm" type="com.mariya.form.OrderForm"/>
 
     </form-beans>
@@ -68,7 +70,8 @@
                 type="org.springframework.web.struts.DelegatingActionProxy"
                 name="customerForm"
                 validate="true"
-                scope="request">
+                scope="request"
+                input="/jsp/customer/register.jsp">
             <forward name="list" path="/jsp/customer/list.jsp"/>
             <forward name="edit" path="/jsp/customer/edit.jsp"/>
             <forward name="create" path="/jsp/customer/create.jsp"/>
@@ -100,6 +103,10 @@
 
     <plug-in className="org.springframework.web.struts.ContextLoaderPlugIn">
         <set-property property="contextConfigLocation" value="/WEB-INF/action-servlet.xml"/>
+    </plug-in>
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property value="/org/apache/struts/validator/validator-rules.xml,/WEB-INF/validation.xml"
+                      property="pathnames"/>
     </plug-in>
 
 </struts-config>
