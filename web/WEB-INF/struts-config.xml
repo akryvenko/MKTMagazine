@@ -10,8 +10,25 @@
         <form-bean name="officeForm" type="com.mariya.form.OfficeForm"/>
         <form-bean name="employerForm" type="com.mariya.form.EmployerForm"/>
         <form-bean name="customerForm" type="com.mariya.form.CustomerForm">
-            <form-property name="firstName" type="java.lang.String" />
-            <form-property name="lastName" type="java.lang.String" />
+            <form-property name="firstName" type="java.lang.String"/>
+            <form-property name="lastName" type="java.lang.String"/>
+
+        </form-bean>
+
+        <form-bean name="registrationCustomerForm" type="com.mariya.form.RegistrationCustomerForm">
+            <form-property name="firstName" type="java.lang.String"/>
+            <form-property name="lastName" type="java.lang.String"/>
+            <form-property name="customerEmail" type="java.lang.String"/>
+            <form-property name="customerPhone" type="java.lang.String"/>
+            <form-property name="username" type="java.lang.String"/>
+            <form-property name="password" type="java.lang.String"/>
+            <form-property name="credit" type="java.math.BigDecimal"/>
+
+            <form-property name="organizationName" type="java.lang.String"/>
+            <form-property name="city" type="java.lang.String"/>
+            <form-property name="address" type="java.lang.String"/>
+            <form-property name="organizationPhone" type="java.lang.String"/>
+            <form-property name="organizationEmail" type="java.lang.String"/>
         </form-bean>
 
         <form-bean name="orderForm" type="com.mariya.form.OrderForm"/>
@@ -33,12 +50,12 @@
         </action>
 
         <action path="/registerCustomer"
-                name="customerForm"
+                name="registrationCustomerForm"
                 input="/jsp/customer/register.jsp"
                 scope="request"
                 validate="true"
-                type="org.springframework.web.struts.DelegatingActionProxy"
-                >
+                type="org.springframework.web.struts.DelegatingActionProxy">
+
             <forward name="success" path="/welcome.do"/>
         </action>
 
@@ -110,7 +127,7 @@
 
     </action-mappings>
 
-    <message-resources parameter="strutsmessage"/>
+    <message-resources parameter="strutsmessage" factory="com.mariya.MKTMessageResourceFactory"/>
 
     <plug-in className="org.springframework.web.struts.ContextLoaderPlugIn">
         <set-property property="contextConfigLocation" value="/WEB-INF/action-servlet.xml"/>

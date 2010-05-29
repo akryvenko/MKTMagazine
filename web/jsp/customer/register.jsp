@@ -63,7 +63,7 @@
             </tr>
             <tr class="prop">
                 <td valign="top" class="name">Телефон:</td>
-                <td valign="top" class="value"><input type="password" name="phone" > </td>
+                <td valign="top" class="value"><input type="text" name="organizationPhone" > </td>
             </tr>
             <tr class="prop">
                 <td valign="top" class="name">Електронна Пошта:</td>

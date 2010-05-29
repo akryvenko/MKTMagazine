@@ -3,7 +3,21 @@
         "http://java.sun.com/dtd/web-app_2_3.dtd">
 <web-app>
 
-     <filter>
+    <filter>
+        <filter-name>EncodingFilter</filter-name>
+        <filter-class>com.mariya.EncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>utf-8</param-value>
+        </init-param>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>EncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
         <filter-name>Acegi Filter Chain Proxy</filter-name>
         <filter-class>org.acegisecurity.util.FilterToBeanProxy</filter-class>
         <init-param>
@@ -13,14 +27,14 @@
     </filter>
 
     <filter-mapping>
-      <filter-name>Acegi Filter Chain Proxy</filter-name>
-      <url-pattern>/*</url-pattern>
+        <filter-name>Acegi Filter Chain Proxy</filter-name>
+        <url-pattern>/*</url-pattern>
     </filter-mapping>
 
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>/WEB-INF/applicationContext.xml</param-value>
-		<param-value>/WEB-INF/applicationContext-acegi-security.xml</param-value>
+        <param-value>/WEB-INF/applicationContext-acegi-security.xml</param-value>
     </context-param>
 
     <filter>

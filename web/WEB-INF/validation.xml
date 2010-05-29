@@ -7,6 +7,42 @@
 
 <form-validation>
    <formset>
+       <form name="registrationCustomerForm">
+         <field property="firstName" depends="required">
+             <arg position="0" key="register.customer.form.firstname"/>
+         </field>
+         <field property="lastName" depends="required">
+             <arg position="0" key="register.customer.form.lastName"/>
+         </field>
+         <field property="customerEmail" depends="required,email">
+             <arg position="0" key="register.customer.form.email"/>
+         </field>
+         <field property="customerPhone" depends="required">
+             <arg position="0" key="register.customer.form.customerPhone"/>
+         </field>
+         <field property="username" depends="required">
+             <arg position="0" key="register.customer.form.login"/>
+         </field>
+         <field property="password" depends="required">
+             <arg position="0" key="register.customer.form.password"/>
+         </field>
+
+         <field property="organizationName" depends="required">
+             <arg position="0" key="register.customer.form.organizationName"/>
+         </field>
+         <field property="city" depends="required">
+             <arg position="0" key="register.customer.form.city"/>
+         </field>
+         <field property="address" depends="required">
+             <arg position="0" key="register.customer.form.address"/>
+         </field>
+         <field property="organizationEmail" depends="required,email">
+             <arg position="0" key="register.customer.form.organizationEmail"/>
+         </field>
+         <field property="organizationPhone" depends="required">
+             <arg position="0" key="register.customer.form.organizationPhone"/>
+         </field>
+      </form>
       <form name="customerForm">
          <field property="firstName" depends="required">
              <arg position="0" key="submitForm.customer.firstname"/>

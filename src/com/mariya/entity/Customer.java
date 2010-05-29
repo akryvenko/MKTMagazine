@@ -18,6 +18,12 @@ public class Customer implements Serializable {
     @Column(name="last_name")
     private String lastName;
 
+    @Basic
+    private String mail;
+
+    @Basic
+    private String phone;
+
     @OneToMany(cascade=CascadeType.ALL)
     @JoinColumn(name="customer_id")
     private List<Office> offices;
@@ -76,5 +82,21 @@ public class Customer implements Serializable {
 
     public void setOffices(List<Office> offices) {
         this.offices = offices;
+    }
+
+    public String getMail() {
+        return mail;
+    }
+
+    public void setMail(String mail) {
+        this.mail = mail;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 }
