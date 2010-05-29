@@ -26,7 +26,7 @@
             %>
             <a href="<c:url value='/acegilogin.jsp'/>"/>Авторизуватися</a>
             |
-            <a href="<c:url value="/customer.do"><c:param name="action" value="signup"/></c:url>">Зареєструватися</a>
+            <a href="<c:url value="/customerSignup.do"/>">Зареєструватися</a>
             <%
             } else {
                 String userRole = ((UserDetails) auth.getPrincipal()).getUsername();
@@ -37,11 +37,12 @@
             <% } %>
         </div>
         <div id="navigation">
+            <ul class="nav">
+                <li><a href="<c:url value="/welcome.do"/>">На головну</a></li>
             <%
                 if (!(auth.getPrincipal() instanceof String)) {
                     String userRole = ((UserDetails) auth.getPrincipal()).getAuthorities()[0].getAuthority();
             %>
-            <ul class="nav">
                 <%
                    if (userRole.equalsIgnoreCase("ROLE_ADMIN")) {
                 %>
@@ -69,10 +70,11 @@
 
                  <li><a href="<c:url value="/setings.do" />">Налаштування</a></li>
 
-            </ul>
+
             <%
                 }
             %>
+            </ul>
         </div>
     </div>
     <div id="content">

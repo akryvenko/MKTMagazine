@@ -10,8 +10,10 @@
         <form-bean name="officeForm" type="com.mariya.form.OfficeForm"/>
         <form-bean name="employerForm" type="com.mariya.form.EmployerForm"/>
         <form-bean name="customerForm" type="com.mariya.form.CustomerForm">
-            <form-property name="firstName" type="java.lang.String"/>
+            <form-property name="firstName" type="java.lang.String" />
+            <form-property name="lastName" type="java.lang.String" />
         </form-bean>
+
         <form-bean name="orderForm" type="com.mariya.form.OrderForm"/>
 
     </form-beans>
@@ -30,8 +32,18 @@
             <forward name="create" path="/jsp/product/create.jsp"/>
         </action>
 
-        <action path="/customer/product" type="org.springframework.web.struts.DelegatingActionProxy" name="productForm">
-            <forward name="order_product" path="/jsp/product/order_product.jsp"/>
+        <action path="/registerCustomer"
+                name="customerForm"
+                input="/jsp/customer/register.jsp"
+                scope="request"
+                validate="true"
+                type="org.springframework.web.struts.DelegatingActionProxy"
+                >
+            <forward name="success" path="/welcome.do"/>
+        </action>
+
+        <action path="/customerSignup" type="org.springframework.web.struts.DelegatingActionProxy">
+            <forward name="success" path="/jsp/customer/register.jsp"/>
         </action>
 
         <action path="/employer"
@@ -69,7 +81,6 @@
         <action path="/customer"
                 type="org.springframework.web.struts.DelegatingActionProxy"
                 name="customerForm"
-                validate="true"
                 scope="request"
                 input="/jsp/customer/register.jsp">
             <forward name="list" path="/jsp/customer/list.jsp"/>

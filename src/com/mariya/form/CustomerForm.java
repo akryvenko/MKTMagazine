@@ -16,13 +16,6 @@ public class CustomerForm extends DynaValidatorForm {
     private Long employer;
     private BigDecimal credit;
 
-
-    @Override
-    public ActionErrors validate(ActionMapping mapping, ServletRequest request) {
-        ActionErrors actionErrors = super.validate(mapping, request);
-        return actionErrors;
-    }
-
     public Long getId() {
         return id;
     }
