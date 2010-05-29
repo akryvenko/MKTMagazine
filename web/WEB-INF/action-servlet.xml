@@ -18,6 +18,8 @@
 
         <bean name="/registerCustomer" class="com.mariya.action.RegisterCustomerAction">
             <property name="customerDAO" ref="customerDAO"/>
+            <property name="officeDAO" ref="officeDAO"/>
+            <property name="employerDAO" ref="employerDAO"/>
 	    </bean>
 
         <bean name="/customerSignup" class="com.mariya.action.CustomerSingUpAction"/>

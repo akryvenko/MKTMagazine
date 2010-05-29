@@ -1,5 +1,4 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
-<%@ taglib prefix="s" uri="/struts-tags" %>
 <%@ taglib uri="http://struts.apache.org/tags-bean" prefix="bean"%>
 <%@ taglib uri="http://struts.apache.org/tags-html" prefix="html"%>
 
@@ -15,65 +14,65 @@
             <html:errors/>
         </div>
         <h1>Інформація по замовнику</h1>
-        <form action="/registerCustomer.do" method="POST" >
+        <html:form action="/registerCustomer">
         <input type="hidden" name="id"/>
         <table>
             <tr class="prop">
                 <td valign="top" class="name">Імя:</td>
-                <td valign="top" class="value"><input type="text" name="firstName" > </td>
+                <td valign="top" class="value"><html:text property="firstName" /> </td>
             </tr>
             <tr class="prop">
                 <td valign="top" class="name">Фамілія:</td>
-                <td valign="top" class="value"><input type="text" name="lastName" > </td>
+                <td valign="top" class="value"><html:text property="lastName" /> </td>
             </tr>
              <tr class="prop">
                 <td valign="top" class="name">Електронна Пошта:</td>
-                <td valign="top" class="value"><input type="text" name="customerEmail" > </td>
+                <td valign="top" class="value"><html:text property="customerEmail" /> </td>
             </tr>
             <tr class="prop">
                 <td valign="top" class="name">Телефон:</td>
-                <td valign="top" class="value"><input type="text" name="customerPhone" > </td>
+                <td valign="top" class="value"><html:text property="customerPhone" /> </td>
             </tr>
             <tr class="prop">
                 <td valign="top" class="name">Логін:</td>
-                <td valign="top" class="value"><input type="text" name="username" > </td>
+                <td valign="top" class="value"><html:text property="username" /> </td>
             </tr>
             <tr class="prop">
                 <td valign="top" class="name">Пароль:</td>
-                <td valign="top" class="value"><input type="password" name="password" > </td>
+                <td valign="top" class="value"><html:password property="password" /> </td>
             </tr>
             <tr class="prop">
                 <td valign="top" class="name">Кредит:</td>
-                <td valign="top" class="value"><input type="text" name="credit" > </td>
+                <td valign="top" class="value"><html:text property="credit" /> </td>
             </tr>
         </table>
         <h1>Організація</h1>
         <table>
             <tr class="prop">
                 <td valign="top" class="name">Назва Організації :</td>
-                <td valign="top" class="value"><input type="text" name="organizationName" > </td>
+                <td valign="top" class="value"><html:text property="organizationName" /> </td>
             </tr>
             <tr class="prop">
                 <td valign="top" class="name">Місто:</td>
-                <td valign="top" class="value"><input type="text" name="city" > </td>
+                <td valign="top" class="value"><html:text property="city" /> </td>
             </tr>
             <tr class="prop">
                 <td valign="top" class="name">Адреса:</td>
-                <td valign="top" class="value"><input type="text" name="address" > </td>
+                <td valign="top" class="value"><html:text property="address" /> </td>
             </tr>
             <tr class="prop">
                 <td valign="top" class="name">Телефон:</td>
-                <td valign="top" class="value"><input type="text" name="organizationPhone" > </td>
+                <td valign="top" class="value"><html:text property="organizationPhone" /> </td>
             </tr>
             <tr class="prop">
                 <td valign="top" class="name">Електронна Пошта:</td>
-                <td valign="top" class="value"><input type="text" name="organizationEmail" > </td>
+                <td valign="top" class="value"><html:text property="organizationEmail" /> </td>
             </tr>
         </table>
           <div class="buttons">
-              <span class="button"><input class="save" type="submit" value="Зареєструвати" /></span>
+              <span class="button"><html:submit styleClass="save"value="Зареєструвати"/></span>
 		  </div>
-        </form>
+        </html:form>
     </div>
   </body>
 </html:html>

@@ -44,12 +44,7 @@
          </field>
       </form>
       <form name="customerForm">
-         <field property="firstName" depends="required">
-             <arg position="0" key="submitForm.customer.firstname"/>
-         </field>
-         <field property="lastName" depends="required">
-             <arg position="0" key="submitForm.customer.firstname"/>
-         </field>
+         
       </form>
    </formset>
 </form-validation>

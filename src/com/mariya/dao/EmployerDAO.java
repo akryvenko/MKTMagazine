@@ -27,11 +27,11 @@ private static String EMPLOYER_SEQUENCE = "emp_id_seq";
             employer.setId(getNextVal(EMPLOYER_SEQUENCE));
         }
 
-         if (employer.getUser().getId() == null){
+         if (employer.getUser() != null && employer.getUser().getId() == null){
             employer.getUser().setId(getNextVal(USER_SEQUENCE));
         }
 
-        if (employer.getUser().getAuthority().getId() == null){
+        if (employer.getUser() != null && employer.getUser().getAuthority().getId() == null){
             employer.getUser().getAuthority().setId(getNextVal(AUTHORITY_SEQUENCE));
         }
 

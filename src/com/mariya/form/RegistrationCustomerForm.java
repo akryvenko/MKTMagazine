@@ -1,7 +1,8 @@
 package com.mariya.form;
 
-import org.apache.struts.validator.DynaValidatorForm;
+import org.apache.struts.validator.ValidatorForm;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 /**
@@ -11,7 +12,7 @@ import java.math.BigDecimal;
  * Time: 12:23:47
  * To change this template use File | Settings | File Templates.
  */
-public class RegistrationCustomerForm extends DynaValidatorForm {
+public class RegistrationCustomerForm extends ValidatorForm implements Serializable {
 
     private String firstName;
     private String lastName;
@@ -113,5 +114,13 @@ public class RegistrationCustomerForm extends DynaValidatorForm {
 
     public void setOrganizationEmail(String organizationEmail) {
         this.organizationEmail = organizationEmail;
+    }
+
+    public String getOrganizationPhone() {
+        return organizationPhone;
+    }
+
+    public void setOrganizationPhone(String organizationPhone) {
+        this.organizationPhone = organizationPhone;
     }
 }

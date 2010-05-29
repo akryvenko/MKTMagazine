@@ -17,7 +17,7 @@ public class CustomerDAO extends BaseDAO {
         return (Customer) getEntityById(Customer.class, customerID);
     }
 
-    public void save(Customer customer){
+    public Customer save(Customer customer){
         if (customer.getId() == null){
             customer.setId(getNextVal(CUSTOMER_SEQUENCE));
         }
@@ -31,6 +31,8 @@ public class CustomerDAO extends BaseDAO {
         }
 
        saveOrUpdateEntity(customer);
+
+       return findById(customer.getId()); 
     }
 
     public void delete(Customer customer){

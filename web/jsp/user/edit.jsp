@@ -1,5 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
-<%@ taglib prefix="s" uri="/struts-tags" %>
+
 <%@ page contentType="text/html;charset=WINDOWS-1251" language="java" %>
 
 <jsp:useBean id="employers" scope="request" type="java.util.Collection"/>

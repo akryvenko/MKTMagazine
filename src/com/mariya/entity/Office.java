@@ -2,25 +2,35 @@ package com.mariya.entity;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Set;
 
 @Entity
-@Table(name="office")
+@Table(name = "office")
 public class Office {
 
     @Id
     private Long id;
 
     @Basic
+    private String name;
+
+    @Basic
     private String city;
+
+    @Basic
+    private String address;
+
+    @Basic
+    private String phone;
+
+    @Basic
+    private String mail;
 
     @Basic
     private String region;
 
     @OneToMany(cascade = {CascadeType.ALL, CascadeType.MERGE}, fetch = FetchType.EAGER)
-    @JoinColumn(name="office_id")
+    @JoinColumn(name = "office_id")
     private Set<Employer> employees;
 
     @Basic
@@ -29,8 +39,8 @@ public class Office {
     @Basic
     private BigDecimal sales;
 
-    @ManyToOne( cascade = CascadeType.ALL)
-    @JoinColumn(name="customer_id")
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "customer_id")
     private Customer customer;
 
     public Long getId() {
@@ -91,9 +101,45 @@ public class Office {
     }
 
     public void populate(Office office) {
-            this.city = office.getCity();
-            this.region = office.getRegion();
-            this.target = office.getTarget();
-            this.sales = office.getSales();
+        this.name = office.getName();
+        this.address = office.getAddress();
+        this.phone = office.getPhone();
+        this.mail = office.getMail();
+        this.city = office.getCity();
+        this.region = office.getRegion();
+        this.target = office.getTarget();
+        this.sales = office.getSales();
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getMail() {
+        return mail;
+    }
+
+    public void setMail(String mail) {
+        this.mail = mail;
     }
 }

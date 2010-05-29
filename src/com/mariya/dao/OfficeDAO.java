@@ -19,12 +19,14 @@ public class OfficeDAO extends BaseDAO {
         return office;
     }
 
-    public void save(Office office) {
+    public Office save(Office office) {
         if (office.getId() == null) {
             office.setId(getNextVal(OFFICE_SEQUENCE));
         }
         saveOrUpdateEntity(office);
         getSession().flush();
+        
+        return findById(office.getId());
     }
 
     public void delete(Office office) {

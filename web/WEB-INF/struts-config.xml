@@ -16,19 +16,19 @@
         </form-bean>
 
         <form-bean name="registrationCustomerForm" type="com.mariya.form.RegistrationCustomerForm">
-            <form-property name="firstName" type="java.lang.String"/>
-            <form-property name="lastName" type="java.lang.String"/>
-            <form-property name="customerEmail" type="java.lang.String"/>
-            <form-property name="customerPhone" type="java.lang.String"/>
-            <form-property name="username" type="java.lang.String"/>
-            <form-property name="password" type="java.lang.String"/>
-            <form-property name="credit" type="java.math.BigDecimal"/>
+            <!--<form-property name="firstName" type="java.lang.String"/>-->
+            <!--<form-property name="lastName" type="java.lang.String"/>-->
+            <!--<form-property name="customerEmail" type="java.lang.String"/>-->
+            <!--<form-property name="customerPhone" type="java.lang.String"/>-->
+            <!--<form-property name="username" type="java.lang.String"/>-->
+            <!--<form-property name="password" type="java.lang.String"/>-->
+            <!--<form-property name="credit" type="java.math.BigDecimal"/>-->
 
-            <form-property name="organizationName" type="java.lang.String"/>
-            <form-property name="city" type="java.lang.String"/>
-            <form-property name="address" type="java.lang.String"/>
-            <form-property name="organizationPhone" type="java.lang.String"/>
-            <form-property name="organizationEmail" type="java.lang.String"/>
+            <!--<form-property name="organizationName" type="java.lang.String"/>-->
+            <!--<form-property name="city" type="java.lang.String"/>-->
+            <!--<form-property name="address" type="java.lang.String"/>-->
+            <!--<form-property name="organizationPhone" type="java.lang.String"/>-->
+            <!--<form-property name="organizationEmail" type="java.lang.String"/>-->
         </form-bean>
 
         <form-bean name="orderForm" type="com.mariya.form.OrderForm"/>
@@ -50,6 +50,7 @@
         </action>
 
         <action path="/registerCustomer"
+                attribute="registrationCustomerForm"
                 name="registrationCustomerForm"
                 input="/jsp/customer/register.jsp"
                 scope="request"

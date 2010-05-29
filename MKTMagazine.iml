@@ -20,13 +20,6 @@
         </webroots>
         <context-artifact name="MKTMagazine:war exploded" />
       </configuration>
-      <facet type="Struts2" name="Struts 2">
-        <configuration>
-          <fileset id="s2fileset1" name="Default File Set" removed="false">
-            <file>file://$MODULE_DIR$/web/WEB-INF/struts-config.xml</file>
-          </fileset>
-        </configuration>
-      </facet>
       <facet type="struts" name="Struts">
         <configuration>
           <option name="myStrutsValidationEnabled" value="true" />
