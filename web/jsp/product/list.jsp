@@ -34,7 +34,7 @@
                  <c:out value="${product.count}"/>
             </td>
             <td>
-               <a class="actionEdit" href="<c:url value="/product.do"><c:param name="productId" value="${product.id}"/><c:param name="action" value="edit"/></c:url>">Редагувати</a>
+               <a class="actionEdit" href="<c:url value="/product/edit.do"><c:param name="productId" value="${product.id}"/></c:url>">Редагувати</a>
                 <a class="actionCancel" href="<c:url value="/product.do"><c:param name="productId" value="${product.id}"/><c:param name="action" value="delete"/></c:url>">Видалити</a>
             </td>
         </tr>

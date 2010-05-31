@@ -3,16 +3,18 @@ package com.mariya.form;
 import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionMapping;
+import org.apache.struts.validator.ValidatorForm;
 
 import javax.servlet.http.HttpServletRequest;
+import java.io.Serializable;
 import java.math.BigDecimal;
 
-public class ProductForm extends ActionForm {
+public class ProductForm extends ValidatorForm implements Serializable {
 
     private Long id = null;
     private String name;
     private String description = "";
-    private BigDecimal cost;
+    private Float cost;
     private int count;
 
     @Override
@@ -38,11 +40,11 @@ public class ProductForm extends ActionForm {
         this.description = description;
     }
 
-    public BigDecimal getCost() {
+    public Float getCost() {
         return cost;
     }
 
-    public void setCost(BigDecimal cost) {
+    public void setCost(Float cost) {
         this.cost = cost;
     }
 

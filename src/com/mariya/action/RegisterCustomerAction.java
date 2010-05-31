@@ -13,6 +13,7 @@ import org.apache.struts.action.ActionMapping;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.math.BigDecimal;
 
 /**
  * Created by IntelliJ IDEA.
@@ -37,7 +38,7 @@ public class RegisterCustomerAction extends BaseAction {
         customer.setLastName(registrationCustomerForm.getLastName());
         customer.setMail(registrationCustomerForm.getCustomerEmail());
         customer.setPhone(registrationCustomerForm.getCustomerPhone());
-        customer.setCredit(registrationCustomerForm.getCredit());
+        customer.setCredit(new BigDecimal(registrationCustomerForm.getCredit()));
 
         User user = new User();
         user.setUsername(registrationCustomerForm.getUsername());

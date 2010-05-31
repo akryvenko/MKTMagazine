@@ -48,7 +48,7 @@ public class Utils {
             product.setId(null);
         }
         product.setDescription(productForm.getDescription());
-        product.setPrice(productForm.getCost());
+        product.setPrice(new BigDecimal(productForm.getCost()));
         product.setName(productForm.getName());
         product.setCount(productForm.getCount());
         return product;

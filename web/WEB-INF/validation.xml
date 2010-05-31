@@ -26,6 +26,9 @@
          <field property="password" depends="required">
              <arg position="0" key="register.customer.form.password"/>
          </field>
+         <field property="credit" depends="required,double">
+             <arg position="0" key="register.customer.form.credit"/>
+         </field>
 
          <field property="organizationName" depends="required">
              <arg position="0" key="register.customer.form.organizationName"/>
@@ -45,6 +48,17 @@
       </form>
       <form name="customerForm">
          
+      </form>
+      <form name="productForm">
+          <field property="name" depends="required">
+             <arg position="0" key="new.product.form.product.name"/>
+         </field>
+          <field property="cost" depends="required">
+             <arg position="0" key="new.product.form.product.cost"/>
+         </field>
+         <field property="count" depends="required">
+             <arg position="0" key="new.product.form.product.count"/>
+         </field>
       </form>
    </formset>
 </form-validation>
