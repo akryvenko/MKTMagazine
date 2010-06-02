@@ -15,30 +15,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="21a3733a-d43e-4f62-b331-730144e5e426" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jsp/product/edit.jsp" afterPath="$PROJECT_DIR$/web/jsp/product/edit.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mariya/entity/Customer.java" afterPath="$PROJECT_DIR$/src/com/mariya/entity/Customer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mariya/action/ListEmployeeAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mariya/entity/Employer.java" afterPath="$PROJECT_DIR$/src/com/mariya/entity/Employer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jsp/welcome.jsp" afterPath="$PROJECT_DIR$/web/jsp/welcome.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mariya/utils/Utils.java" afterPath="$PROJECT_DIR$/src/com/mariya/utils/Utils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mariya/form/EmployerForm.java" afterPath="$PROJECT_DIR$/src/com/mariya/form/EmployerForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MKTMagazine.iws" afterPath="$PROJECT_DIR$/MKTMagazine.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jsp/employer/create.jsp" afterPath="$PROJECT_DIR$/web/jsp/employer/create.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mariya/action/EditEmployeeAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jsp/employer/list.jsp" afterPath="$PROJECT_DIR$/web/jsp/employer/list.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mariya/action/NewProductAction.java" />
-      <change type="MOVED" beforePath="D:\MKTMagazine\src\com\mariya\action\EmployerAction.java" afterPath="$PROJECT_DIR$/src/com/mariya/action/EditOfficeAction.java" />
+      <change type="MOVED" beforePath="D:\MKTMagazine\src\com\mariya\action\OfficeAction.java" afterPath="$PROJECT_DIR$/src/com/mariya/action/office/DeleteOfficeAction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mariya/form/OfficeForm.java" afterPath="$PROJECT_DIR$/src/com/mariya/form/OfficeForm.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/action-servlet.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/action-servlet.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mariya/action/office/ListOfficeAction.java" />
+      <change type="DELETED" beforePath="D:\MKTMagazine\src\com\mariya\action\EditOfficeAction.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mariya/action/office/SaveOfficeAction.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jsp/decorators/main.jsp" afterPath="$PROJECT_DIR$/web/jsp/decorators/main.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mariya/action/DeleteEmployeeAction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mariya/action/SaveEmployeeAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jsp/product/list.jsp" afterPath="$PROJECT_DIR$/web/jsp/product/list.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mariya/form/ProductForm.java" afterPath="$PROJECT_DIR$/src/com/mariya/form/ProductForm.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mariya/action/office/EditOfficeAction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jsp/office/create.jsp" afterPath="$PROJECT_DIR$/web/jsp/office/create.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mariya/utils/Utils.java" afterPath="$PROJECT_DIR$/src/com/mariya/utils/Utils.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/struts-config.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/struts-config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/applicationContext-acegi-security.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/applicationContext-acegi-security.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MKTMagazine.iws" afterPath="$PROJECT_DIR$/MKTMagazine.iws" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/strutsmessage.properties" afterPath="$PROJECT_DIR$/src/strutsmessage.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mariya/action/NewEmployeeAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jsp/employer/edit.jsp" afterPath="$PROJECT_DIR$/web/jsp/employer/edit.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jsp/office/list.jsp" afterPath="$PROJECT_DIR$/web/jsp/office/list.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jsp/office/edit.jsp" afterPath="$PROJECT_DIR$/web/jsp/office/edit.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mariya/action/office/NewOfficeAction.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/validation.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/validation.xml" />
     </list>
     <ignored path="$USER_HOME_GRAILS$/" />
@@ -160,107 +152,67 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="struts-config.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/struts-config.xml">
-          <provider editor-type-id="com.intellij.struts.diagram.DiagramEditorProvider">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="31" selection-start="1941" selection-end="1941" vertical-scroll-proportion="-19.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EmployerForm.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/mariya/form/EmployerForm.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="142" column="21" selection-start="2819" selection-end="2819" vertical-scroll-proportion="0.8587258">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="create.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/jsp/product/create.jsp">
+        <entry file="file://$PROJECT_DIR$/web/jsp/office/create.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="4.08">
+            <state line="46" column="75" selection-start="1942" selection-end="1942" vertical-scroll-proportion="-12.384615">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="applicationContext-acegi-security.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/applicationContext-acegi-security.xml">
+      <file leaf-file-name="edit.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/jsp/office/edit.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="121" column="23" selection-start="6116" selection-end="6116" vertical-scroll-proportion="-6.95">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="welcome.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/jsp/welcome.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="116" selection-start="983" selection-end="996" vertical-scroll-proportion="-4.08">
+            <state line="48" column="74" selection-start="1972" selection-end="1972" vertical-scroll-proportion="-10.2">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/jsp/product/list.jsp">
+      <file leaf-file-name="list.jsp" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/jsp/office/list.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="87" selection-start="294" selection-end="294" vertical-scroll-proportion="-1.08">
+            <state line="31" column="43" selection-start="1040" selection-end="1040" vertical-scroll-proportion="0.30989584">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="action-servlet.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/action-servlet.xml">
+      <file leaf-file-name="SaveOfficeAction.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mariya/action/office/SaveOfficeAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="62" selection-start="491" selection-end="491" vertical-scroll-proportion="-5.1">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EditEmployeeAction.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mariya/action/EditEmployeeAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="88" selection-start="740" selection-end="740" vertical-scroll-proportion="0.0">
+            <state line="37" column="32" selection-start="1430" selection-end="1430" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Utils.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mariya/utils/Utils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="68" column="44" selection-start="2256" selection-end="2256" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="EditOfficeAction.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mariya/action/EditOfficeAction.java">
+        <entry file="file://$PROJECT_DIR$/src/com/mariya/action/office/EditOfficeAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="13" selection-start="667" selection-end="667" vertical-scroll-proportion="0.0">
+            <state line="43" column="24" selection-start="1683" selection-end="1683" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NewProductAction.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mariya/action/NewProductAction.java">
+      <file leaf-file-name="Office.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mariya/entity/Office.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="40" selection-start="888" selection-end="888" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="26" column="27" selection-start="281" selection-end="380" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -278,22 +230,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/web/jsp/employer/create.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/validation.xml" />
-        <option value="$PROJECT_DIR$/src/com/mariya/action/SaveEmployeeAction.java" />
-        <option value="$PROJECT_DIR$/web/jsp/employer/list.jsp" />
-        <option value="$PROJECT_DIR$/src/com/mariya/action/EditEmployeeAction.java" />
-        <option value="$PROJECT_DIR$/web/jsp/product/edit.jsp" />
-        <option value="$PROJECT_DIR$/web/jsp/employer/edit.jsp" />
-        <option value="$PROJECT_DIR$/src/com/mariya/form/ProductForm.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/action-servlet.xml" />
-        <option value="$PROJECT_DIR$/web/jsp/welcome.jsp" />
-        <option value="$PROJECT_DIR$/web/jsp/product/list.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/applicationContext-acegi-security.xml" />
-        <option value="$PROJECT_DIR$/src/com/mariya/action/NewProductAction.java" />
+        <option value="$PROJECT_DIR$/src/com/mariya/action/DeleteOfficeAction.java" />
+        <option value="$PROJECT_DIR$/src/com/mariya/action/ListOfficeAction.java" />
+        <option value="$PROJECT_DIR$/web/jsp/decorators/main.jsp" />
+        <option value="$PROJECT_DIR$/src/com/mariya/action/office/DeleteOfficeAction.java" />
+        <option value="$PROJECT_DIR$/src/com/mariya/action/office/NewOfficeAction.java" />
+        <option value="$PROJECT_DIR$/src/com/mariya/action/office/SaveOfficeAction.java" />
+        <option value="$PROJECT_DIR$/src/com/mariya/form/OfficeForm.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/struts-config.xml" />
-        <option value="$PROJECT_DIR$/src/com/mariya/action/EditOfficeAction.java" />
-        <option value="$PROJECT_DIR$/src/com/mariya/form/EmployerForm.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/validation.xml" />
+        <option value="$PROJECT_DIR$/src/strutsmessage.properties" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/action-servlet.xml" />
+        <option value="$PROJECT_DIR$/src/com/mariya/action/office/EditOfficeAction.java" />
+        <option value="$PROJECT_DIR$/src/com/mariya/utils/Utils.java" />
+        <option value="$PROJECT_DIR$/web/jsp/office/create.jsp" />
+        <option value="$PROJECT_DIR$/web/jsp/office/edit.jsp" />
+        <option value="$PROJECT_DIR$/web/jsp/office/list.jsp" />
       </list>
     </option>
   </component>
@@ -450,7 +402,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="product" />
+              <option name="myItemId" value="office" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -473,50 +425,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="employer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MKTMagazine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MKTMagazine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jsp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="decorators" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MKTMagazine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MKTMagazine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jsp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="customer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -606,29 +514,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="form" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MKTMagazine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MKTMagazine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mariya" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="entity" />
+              <option name="myItemId" value="action" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -651,6 +537,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="action" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="office" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -682,6 +572,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.mariya.action.office" />
       <recent name="com.mariya.action" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -1001,13 +892,13 @@
     <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2587269" sideWeight="0.80269814" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18887015" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6644182" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.325462" sideWeight="0.17706576" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.62057334" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Struts Assistant" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32927817" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2731872" sideWeight="0.0" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2731872" sideWeight="0.0" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32715008" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1018,8 +909,8 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3295688" sideWeight="0.71500844" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1821248" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3295688" sideWeight="0.79089373" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19730185" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Dataflow to this" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1041,7 +932,7 @@
     <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished product validation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug: on creating new product after editing product, fields is populated;&#10;Added functionality for employee validation." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1068,6 +959,7 @@
     <MESSAGE value="Added functionality for display validation messages" />
     <MESSAGE value="Changed validation functionality" />
     <MESSAGE value="Finished product validation" />
+    <MESSAGE value="Fixed bug: on creating new product after editing product, fields is populated;&#10;Added functionality for employee validation." />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -1115,100 +1007,65 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/validation.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/mariya/action/office/DeleteOfficeAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="57" selection-start="3135" selection-end="3135" vertical-scroll-proportion="0.0">
+        <state line="20" column="13" selection-start="674" selection-end="674" vertical-scroll-proportion="0.22972973">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/jsp/product/edit.jsp">
+    <entry file="file://$PROJECT_DIR$/src/com/mariya/action/office/NewOfficeAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="1312" selection-end="1312" vertical-scroll-proportion="-12.08">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/jsp/employer/edit.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="88" selection-start="458" selection-end="458" vertical-scroll-proportion="-6.12">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/struts/struts-core.jar!/org/apache/struts/validator/ValidatorForm.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="16" selection-start="965" selection-end="965" vertical-scroll-proportion="-5.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mariya/form/ProductForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="0" selection-start="1644" selection-end="1644" vertical-scroll-proportion="0.0">
+        <state line="33" column="0" selection-start="1255" selection-end="1255" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/jsp/welcome.jsp">
+    <entry file="file://$PROJECT_DIR$/web/jsp/employer/edit.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="116" selection-start="983" selection-end="996" vertical-scroll-proportion="-4.08">
+        <state line="2" column="0" selection-start="127" selection-end="195" vertical-scroll-proportion="0.12546125">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/jsp/product/list.jsp">
+    <entry file="file://$PROJECT_DIR$/src/com/mariya/entity/Office.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="87" selection-start="294" selection-end="294" vertical-scroll-proportion="-1.08">
+        <state line="26" column="27" selection-start="281" selection-end="380" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/applicationContext-acegi-security.xml">
+    <entry file="file://$PROJECT_DIR$/src/strutsmessage.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="121" column="23" selection-start="6116" selection-end="6116" vertical-scroll-proportion="-6.95">
+        <state line="62" column="23" selection-start="2633" selection-end="2633" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
-        <state />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mariya/form/OfficeForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="32" selection-start="1341" selection-end="1341" vertical-scroll-proportion="-1.3243967">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/jsp/product/create.jsp">
+    <entry file="file://$PROJECT_DIR$/web/jsp/customer/register.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="4.08">
+        <state line="14" column="20" selection-start="375" selection-end="437" vertical-scroll-proportion="0.7147147">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/action-servlet.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="62" selection-start="491" selection-end="491" vertical-scroll-proportion="-5.1">
+        <state line="80" column="48" selection-start="3116" selection-end="3116" vertical-scroll-proportion="7.1751413">
           <folding />
         </state>
       </provider>
       <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mariya/action/NewProductAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="40" selection-start="888" selection-end="888" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mariya/action/EditProductAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="40" selection-start="1311" selection-end="1315" vertical-scroll-proportion="0.68105066">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/struts-config.xml">
@@ -1216,33 +1073,59 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="31" selection-start="1941" selection-end="1941" vertical-scroll-proportion="-19.0">
+        <state line="142" column="29" selection-start="5586" selection-end="5586" vertical-scroll-proportion="1.2410257">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mariya/action/EditEmployeeAction.java">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/validation.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="88" selection-start="740" selection-end="740" vertical-scroll-proportion="0.0">
+        <state line="107" column="51" selection-start="4924" selection-end="4924" vertical-scroll-proportion="0.71201414">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mariya/utils/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="44" selection-start="2256" selection-end="2256" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mariya/action/office/SaveOfficeAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="32" selection-start="1430" selection-end="1430" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mariya/action/EditOfficeAction.java">
+    <entry file="file://$PROJECT_DIR$/src/com/mariya/action/office/EditOfficeAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="13" selection-start="667" selection-end="667" vertical-scroll-proportion="0.0">
+        <state line="43" column="24" selection-start="1683" selection-end="1683" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mariya/form/EmployerForm.java">
+    <entry file="file://$PROJECT_DIR$/web/jsp/office/create.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="142" column="21" selection-start="2819" selection-end="2819" vertical-scroll-proportion="0.8587258">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="46" column="75" selection-start="1942" selection-end="1942" vertical-scroll-proportion="-12.384615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/jsp/office/edit.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="74" selection-start="1972" selection-end="1972" vertical-scroll-proportion="-10.2">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/jsp/office/list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="43" selection-start="1040" selection-end="1040" vertical-scroll-proportion="0.30989584">
+          <folding />
         </state>
       </provider>
     </entry>

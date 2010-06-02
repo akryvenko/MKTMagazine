@@ -1,4 +1,4 @@
-package com.mariya.action;
+package com.mariya.action.product;
 
 import org.acegisecurity.Authentication;
 import org.acegisecurity.context.SecurityContextHolder;

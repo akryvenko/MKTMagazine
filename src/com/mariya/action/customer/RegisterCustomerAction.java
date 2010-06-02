@@ -1,5 +1,6 @@
-package com.mariya.action;
+package com.mariya.action.customer;
 
+import com.mariya.action.BaseAction;
 import com.mariya.dao.CustomerDAO;
 import com.mariya.dao.EmployerDAO;
 import com.mariya.dao.OfficeDAO;

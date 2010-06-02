@@ -1,4 +1,4 @@
-package com.mariya.action;
+package com.mariya.action.product;
 
 import com.mariya.dao.ProductDAO;
 import com.mariya.entity.Product;

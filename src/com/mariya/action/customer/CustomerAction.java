@@ -1,4 +1,4 @@
-package com.mariya.action;
+package com.mariya.action.customer;
 
 import com.mariya.enums.UserRoles;
 import org.apache.struts.action.Action;

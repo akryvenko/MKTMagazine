@@ -1,4 +1,4 @@
-package com.mariya.action;
+package com.mariya.action.employee;
 
 import com.mariya.dao.EmployerDAO;
 import com.mariya.dao.OfficeDAO;

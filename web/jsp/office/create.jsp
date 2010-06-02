@@ -1,43 +1,57 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
+<%@ taglib uri="http://struts.apache.org/tags-html" prefix="html" %>
 
-<jsp:useBean id="employers" scope="request" type="java.util.Collection"/>
-
-<c:url value="/office.do" var="saveOfficeUrl">
-     <c:param name="action" value="save"/>
-</c:url>
-
-<html>
+<html:html>
   <head>
-      <title>Редагування офісу</title>
+      <title>Створення офісу</title>
   </head>
   <body>
     <div class="body">
-        <h1>Редагування офісу</h1>
-        <form name="officeForm" action="<c:out value="${saveOfficeUrl}"/>" method="POST" >
-        <input type="hidden" name="id"/>
+        <h1>Створення офісу</h1>
+        <div class="errors">
+            <html:errors/>
+        </div>
+        <html:form action="/customer/office/save" >
+        <html:hidden property="id"/>
         <table>
             <tr class="prop">
+                <td valign="top" class="name">Назва організації</td>
+                <td valign="top" class="value"><html:text property="name"/> </td>
+            </tr>
+            <tr class="prop">
                 <td valign="top" class="name">Місто</td>
-                <td valign="top" class="value"><input type="text" name="city" > </td>
+                <td valign="top" class="value"><html:text property="city"/> </td>
             </tr>
             <tr class="prop">
                 <td valign="top" class="name">Регіон</td>
-                <td valign="top" class="value"><input type="text" name="region" > </td>
+                <td valign="top" class="value"><html:text property="region" /> </td>
             </tr>
             <tr class="prop">
-                <td valign="top" class="name">target</td>
-                <td valign="top" class="value"><input type="text" name="target" > </td>
+                <td valign="top" class="name">Адреса</td>
+                <td valign="top" class="value"><html:text property="address" /> </td>
             </tr>
             <tr class="prop">
-                <td valign="top" class="name">sales</td>
-                <td valign="top" class="value"><input type="text" name="sales" > </td>
+                <td valign="top" class="name">Телефон</td>
+                <td valign="top" class="value"><html:text property="phone" /> </td>
+            </tr>
+            <tr class="prop">
+                <td valign="top" class="name">Електронна Пошта</td>
+                <td valign="top" class="value"><html:text property="mail" /> </td>
+            </tr>
+            <tr class="prop">
+                <td valign="top" class="name">Таржет</td>
+                <td valign="top" class="value"><html:text property="target" /> </td>
+            </tr>
+            <tr class="prop">
+                <td valign="top" class="name">Салес</td>
+                <td valign="top" class="value"><html:text property="sales" /> </td>
             </tr>
         </table>
           <div class="buttons">
               <span class="button"><input class="save" type="submit" value="Зберегти" /></span>
 		  </div>
-        </form>
+        </html:form>
     </div>
   </body>
-</html>
+</html:html>

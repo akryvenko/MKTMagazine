@@ -1,5 +1,6 @@
-package com.mariya.action;
+package com.mariya.action.product;
 
+import com.mariya.action.BaseAction;
 import com.mariya.dao.ProductDAO;
 import com.mariya.entity.Product;
 import com.mariya.utils.Constants;

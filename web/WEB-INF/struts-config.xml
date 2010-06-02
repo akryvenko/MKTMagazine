@@ -108,13 +108,46 @@
             <forward name="list" path="/jsp/employer/list.jsp"/>
         </action>
 
-        <action path="/office"
-                type="org.springframework.web.struts.DelegatingActionProxy"
-                name="officeForm">
+        <!--Office actions-->
+
+        <action path="/customer/office/list"
+                type="org.springframework.web.struts.DelegatingActionProxy">
             <forward name="list" path="/jsp/office/list.jsp"/>
-            <forward name="edit" path="/jsp/office/edit.jsp"/>
+        </action>
+
+        <action path="/customer/office/new"
+                attribute="officeForm"
+                name="officeForm"
+                validate="false"
+                input="/jsp/office/create.jsp"
+                type="org.springframework.web.struts.DelegatingActionProxy">
             <forward name="create" path="/jsp/office/create.jsp"/>
         </action>
+
+        <action path="/customer/office/edit"
+                attribute="officeForm"
+                name="officeForm"
+                validate="false"
+                input="/jsp/office/edit.jsp"
+                type="org.springframework.web.struts.DelegatingActionProxy">
+            <forward name="edit" path="/jsp/office/edit.jsp"/>
+        </action>
+
+        <action path="/customer/office/delete"
+                type="org.springframework.web.struts.DelegatingActionProxy">
+            <forward name="list" path="/jsp/office/list.jsp"/>
+        </action>
+        
+        <action path="/customer/office/save"
+                attribute="officeForm"
+                name="officeForm"
+                validate="true"
+                input="/jsp/office/create.jsp"
+                type="org.springframework.web.struts.DelegatingActionProxy">
+            <forward name="list" path="/jsp/office/list.jsp"/>
+        </action>
+
+        <!--Order actions-->
 
         <action path="/order"
                 type="org.springframework.web.struts.DelegatingActionProxy"

@@ -1,4 +1,4 @@
-package com.mariya.action;
+package com.mariya.action.office;
 
 import com.mariya.dao.EmployerDAO;
 import com.mariya.dao.OfficeDAO;
@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
-public class OfficeAction extends Action {
+public class DeleteOfficeAction extends Action {
 
     public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) {
 

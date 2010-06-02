@@ -3,76 +3,97 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean name="/product" class="com.mariya.action.ProductAction">
+    <!--Product actions-->
+
+    <bean name="/product" class="com.mariya.action.product.ProductAction">
         <property name="productDAO" ref="productDAO"/>
     </bean>
 
-    <bean name="/product/new" class="com.mariya.action.NewProductAction">
+    <bean name="/product/new" class="com.mariya.action.product.NewProductAction">
         <property name="productDAO" ref="productDAO"/>
     </bean>
 
-    <bean name="/product/save" class="com.mariya.action.SaveProductAction">
+    <bean name="/product/save" class="com.mariya.action.product.SaveProductAction">
         <property name="productDAO" ref="productDAO"/>
     </bean>
 
-    <bean name="/product/edit" class="com.mariya.action.EditProductAction">
+    <bean name="/product/edit" class="com.mariya.action.product.EditProductAction">
         <property name="productDAO" ref="productDAO"/>
     </bean>
 
-    <bean name="/customer/product" class="com.mariya.action.ProductAction">
+
+    <bean name="/customer/product" class="com.mariya.action.product.ProductAction">
         <property name="productDAO" ref="productDAO"/>
     </bean>
 
-    <bean name="/customer" class="com.mariya.action.CustomerAction">
+    <!--Customer actions-->
+
+    <bean name="/customer" class="com.mariya.action.customer.CustomerAction">
         <property name="employerDAO" ref="employerDAO"/>
         <property name="customerDAO" ref="customerDAO"/>
     </bean>
 
-    <bean name="/registerCustomer" class="com.mariya.action.RegisterCustomerAction">
+    <bean name="/registerCustomer" class="com.mariya.action.customer.RegisterCustomerAction">
         <property name="customerDAO" ref="customerDAO"/>
         <property name="officeDAO" ref="officeDAO"/>
         <property name="employerDAO" ref="employerDAO"/>
     </bean>
 
-    <bean name="/customerSignup" class="com.mariya.action.CustomerSingUpAction"/>
+    <bean name="/customerSignup" class="com.mariya.action.customer.CustomerSingUpAction"/>
 
+    <!--Employees actions-->
 
-    <bean name="/customer/employee/list" class="com.mariya.action.ListEmployeeAction">
+    <bean name="/customer/employee/list" class="com.mariya.action.employee.ListEmployeeAction">
         <property name="employerDAO" ref="employerDAO"/>
     </bean>
 
-    <bean name="/customer/employee/new" class="com.mariya.action.NewEmployeeAction">
-        <property name="employerDAO" ref="employerDAO"/>
-        <property name="officeDAO" ref="officeDAO"/>
-    </bean>
-
-    <bean name="/customer/employee/edit" class="com.mariya.action.EditEmployeeAction">
+    <bean name="/customer/employee/new" class="com.mariya.action.employee.NewEmployeeAction">
         <property name="employerDAO" ref="employerDAO"/>
         <property name="officeDAO" ref="officeDAO"/>
     </bean>
 
-    <bean name="/customer/employee/save" class="com.mariya.action.SaveEmployeeAction">
+    <bean name="/customer/employee/edit" class="com.mariya.action.employee.EditEmployeeAction">
         <property name="employerDAO" ref="employerDAO"/>
         <property name="officeDAO" ref="officeDAO"/>
     </bean>
 
-    <bean name="/customer/employee/delete" class="com.mariya.action.DeleteEmployeeAction">
-        <property name="employerDAO" ref="employerDAO"/>
-    </bean>
-
-    <bean name="/office" class="com.mariya.action.OfficeAction">
+    <bean name="/customer/employee/save" class="com.mariya.action.employee.SaveEmployeeAction">
         <property name="employerDAO" ref="employerDAO"/>
         <property name="officeDAO" ref="officeDAO"/>
     </bean>
 
-    <bean name="/order" class="com.mariya.action.OrderAction">
+    <bean name="/customer/employee/delete" class="com.mariya.action.employee.DeleteEmployeeAction">
+        <property name="employerDAO" ref="employerDAO"/>
+    </bean>
+
+    <!--Ofice actions-->
+
+    <bean name="/customer/office/list" class="com.mariya.action.office.ListOfficeAction">
+        <property name="officeDAO" ref="officeDAO"/>
+    </bean>
+
+    <bean name="/customer/office/new" class="com.mariya.action.office.NewOfficeAction">
+        <property name="employerDAO" ref="employerDAO"/>
+    </bean>
+
+    <bean name="/customer/office/edit" class="com.mariya.action.office.EditOfficeAction">
+        <property name="employerDAO" ref="employerDAO"/>
+        <property name="officeDAO" ref="officeDAO"/>
+    </bean>
+
+    <bean name="/customer/office/save" class="com.mariya.action.office.SaveOfficeAction">
+        <property name="employerDAO" ref="employerDAO"/>
+        <property name="officeDAO" ref="officeDAO"/>
+    </bean>
+
+    <bean name="/order" class="com.mariya.action.order.OrderAction">
         <property name="employerDAO" ref="employerDAO"/>
         <property name="customerDAO" ref="customerDAO"/>
         <property name="productDAO" ref="productDAO"/>
         <property name="orderDAO" ref="orderDAO"/>
     </bean>
 
-    <bean name="/customer/order" class="com.mariya.action.OrderAction">
+    <bean name="/customer/order" class="com.mariya.action.order.OrderAction">
         <property name="employerDAO" ref="employerDAO"/>
         <property name="customerDAO" ref="customerDAO"/>
         <property name="productDAO" ref="productDAO"/>

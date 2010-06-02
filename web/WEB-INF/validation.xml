@@ -83,5 +83,32 @@
                 <arg position="0" key="new.employye.form.sales"/>
             </field>
         </form>
+        <form name="officeForm">
+            <field property="name" depends="required">
+                <arg position="0" key="office.form.name"/>
+            </field>
+            <field property="city" depends="required">
+                <arg position="0" key="office.form.city"/>
+            </field>
+            <field property="region" depends="required">
+                <arg position="0" key="office.form.region"/>
+            </field>
+            <field property="address" depends="required">
+                <arg position="0" key="office.form.address"/>
+            </field>
+            <field property="phone" depends="required">
+                <arg position="0" key="office.form.phone"/>
+            </field>
+            <field property="mail" depends="required,email">
+                <arg position="0" key="office.form.mail"/>
+            </field>
+            <field property="target" depends="required">
+                <arg position="0" key="office.form.target"/>
+            </field>
+            <field property="sales" depends="required">
+                <arg position="0" key="office.form.sales"/>
+            </field>
+        </form>
+
     </formset>
 </form-validation>

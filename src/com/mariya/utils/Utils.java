@@ -62,11 +62,15 @@ public class Utils {
         } else {
             office.setId(null);
         }
+        office.setName(officeForm.getName());
         office.setCity(officeForm.getCity());
         office.setRegion(officeForm.getRegion());
+        office.setAddress(officeForm.getAddress());
+        office.setMail(officeForm.getMail());
+        office.setPhone(officeForm.getPhone());
         office.setCustomer(customer);
-        office.setTarget(officeForm.getTarget());
-        office.setSales(officeForm.getSales());
+        office.setTarget(new BigDecimal(officeForm.getTarget()));
+        office.setSales(new BigDecimal(officeForm.getSales()));
         return office;
     }
 

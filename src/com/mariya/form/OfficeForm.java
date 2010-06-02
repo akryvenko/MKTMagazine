@@ -1,10 +1,15 @@
 package com.mariya.form;
 
 import org.apache.struts.action.ActionForm;
+import org.apache.struts.action.ActionMapping;
+import org.apache.struts.validator.ValidatorForm;
 
+import javax.persistence.Basic;
+import javax.servlet.http.HttpServletRequest;
+import java.io.Serializable;
 import java.math.BigDecimal;
 
-public class OfficeForm extends ActionForm{
+public class OfficeForm extends ValidatorForm implements Serializable {
 
     public String getCity() {
         return city;
@@ -30,19 +35,19 @@ public class OfficeForm extends ActionForm{
         this.manager = manager;
     }
 
-    public BigDecimal getTarget() {
+    public Long getTarget() {
         return target;
     }
 
-    public void setTarget(BigDecimal target) {
+    public void setTarget(Long target) {
         this.target = target;
     }
 
-    public BigDecimal getSales() {
+    public Long getSales() {
         return sales;
     }
 
-    public void setSales(BigDecimal sales) {
+    public void setSales(Long sales) {
         this.sales = sales;
     }
 
@@ -55,10 +60,62 @@ public class OfficeForm extends ActionForm{
         this.id = id;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getMail() {
+        return mail;
+    }
+
+    public void setMail(String mail) {
+        this.mail = mail;
+    }
+
     private Long id;
+    private String name;
     private String city;
     private String region;
     private Long manager;
-    private BigDecimal target;
-    private BigDecimal sales;
+    private Long target;
+    private Long sales;
+    private String address;
+    private String phone;
+    private String mail;
+
+    @Override
+    public void reset(ActionMapping mapping, HttpServletRequest request) {
+        super.reset(mapping, request);
+        id = null;
+        name = "";
+        city = "";
+        region = "";
+        manager = null;
+        target = null;
+        sales = null;
+        address = "";
+        phone = "";
+        mail = "";
+
+    }
 }
