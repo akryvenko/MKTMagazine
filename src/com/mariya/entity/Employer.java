@@ -167,4 +167,8 @@ public class Employer {
         this.quota = employer.getQuota();
         this.sales = employer.getSales();
     }
+
+     public String getFullName(){
+        return firstName + " : " + lastName;
+    }
 }

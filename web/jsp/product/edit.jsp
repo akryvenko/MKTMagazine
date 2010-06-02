@@ -2,10 +2,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://struts.apache.org/tags-html" prefix="html" %>
 
-<c:url value="/product.do" var="saveOrderUrl">
-    <c:param name="action" value="save"/>
-</c:url>
-
 <html:html>
 <head>
     <title>Редагування продукту</title>
@@ -36,7 +32,6 @@
             <tr class="prop">
                 <td valign="top" class="name">Опис продукту</td>
                 <td valign="top" class="value"><html:textarea property="description"  rows="3" cols="10"/></td>
-            </tr>
             </tr>
         </table>
         <div class="buttons">

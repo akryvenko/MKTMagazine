@@ -7,6 +7,10 @@
         <property name="productDAO" ref="productDAO"/>
     </bean>
 
+    <bean name="/product/new" class="com.mariya.action.NewProductAction">
+        <property name="productDAO" ref="productDAO"/>
+    </bean>
+
     <bean name="/product/save" class="com.mariya.action.SaveProductAction">
         <property name="productDAO" ref="productDAO"/>
     </bean>
@@ -33,9 +37,27 @@
     <bean name="/customerSignup" class="com.mariya.action.CustomerSingUpAction"/>
 
 
-    <bean name="/employer" class="com.mariya.action.EmployerAction">
+    <bean name="/customer/employee/list" class="com.mariya.action.ListEmployeeAction">
+        <property name="employerDAO" ref="employerDAO"/>
+    </bean>
+
+    <bean name="/customer/employee/new" class="com.mariya.action.NewEmployeeAction">
         <property name="employerDAO" ref="employerDAO"/>
         <property name="officeDAO" ref="officeDAO"/>
+    </bean>
+
+    <bean name="/customer/employee/edit" class="com.mariya.action.EditEmployeeAction">
+        <property name="employerDAO" ref="employerDAO"/>
+        <property name="officeDAO" ref="officeDAO"/>
+    </bean>
+
+    <bean name="/customer/employee/save" class="com.mariya.action.SaveEmployeeAction">
+        <property name="employerDAO" ref="employerDAO"/>
+        <property name="officeDAO" ref="officeDAO"/>
+    </bean>
+
+    <bean name="/customer/employee/delete" class="com.mariya.action.DeleteEmployeeAction">
+        <property name="employerDAO" ref="employerDAO"/>
     </bean>
 
     <bean name="/office" class="com.mariya.action.OfficeAction">

@@ -8,7 +8,7 @@
   <head><title>Список продуктiв</title></head>
   <body>
   <div class="buttonBar">
-        <span class="menuButton"><a class="create" href="<c:url value="/product.do"><c:param name="action" value="create"/></c:url>">Новий продукт</a></span>
+        <span class="menuButton"><a class="create" href="<c:url value="/product/new.do"/>">Новий продукт</a></span>
   </div>
   <div class="body">
     <h1>Список продуктів</h1>

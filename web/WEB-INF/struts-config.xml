@@ -10,8 +10,7 @@
         <form-bean name="officeForm" type="com.mariya.form.OfficeForm"/>
         <form-bean name="employerForm" type="com.mariya.form.EmployerForm"/>
         <form-bean name="customerForm" type="com.mariya.form.CustomerForm"/>
-        <form-bean name="registrationCustomerForm" type="com.mariya.form.RegistrationCustomerForm" />
-
+        <form-bean name="registrationCustomerForm" type="com.mariya.form.RegistrationCustomerForm"/>
         <form-bean name="orderForm" type="com.mariya.form.OrderForm"/>
 
     </form-beans>
@@ -33,24 +32,33 @@
             <forward name="create" path="/jsp/product/create.jsp"/>
         </action>
 
-        <action path="/product/edit"
+        <action path="/product/new"
                 attribute="productForm"
                 name="productForm"
                 validate="false"
-                input="/jsp/product/edit.jsp"
+                input="/jsp/product/create.jsp"
                 type="org.springframework.web.struts.DelegatingActionProxy">
-                   <forward name="edit" path="/jsp/product/edit.jsp"/>
+            <forward name="success" path="/jsp/product/create.jsp"/>
         </action>
 
-        <action path="/product/save"
-                       attribute="productForm"
-                       name="productForm"
-                       input="/jsp/product/create.jsp"
-                       validate="true"
-                       type="org.springframework.web.struts.DelegatingActionProxy">
-                   <forward name="list" path="/jsp/product/list.jsp"/>
-               </action>
+        <action path="/product/edit"
+                attribute="productForm"
+                name="productForm"
+                input="/jsp/product/edit.jsp"
+                validate="false"
+                type="org.springframework.web.struts.DelegatingActionProxy">
+            <forward name="edit" path="/jsp/product/edit.jsp"/>
+        </action>
 
+
+        <action path="/product/save"
+                attribute="productForm"
+                name="productForm"
+                input="/jsp/product/create.jsp"
+                validate="true"
+                type="org.springframework.web.struts.DelegatingActionProxy">
+            <forward name="list" path="/jsp/product/list.jsp"/>
+        </action>
 
         <action path="/registerCustomer"
                 attribute="registrationCustomerForm"
@@ -67,12 +75,37 @@
             <forward name="success" path="/jsp/customer/register.jsp"/>
         </action>
 
-        <action path="/employer"
-                type="org.springframework.web.struts.DelegatingActionProxy"
-                name="employerForm">
+        <action path="/customer/employee/list"
+                type="org.springframework.web.struts.DelegatingActionProxy">
             <forward name="list" path="/jsp/employer/list.jsp"/>
+        </action>
+
+        <action path="/customer/employee/new"
+                type="org.springframework.web.struts.DelegatingActionProxy">
+            <forward name="success" path="/jsp/employer/create.jsp"/>
+        </action>
+
+        <action path="/customer/employee/edit"
+                attribute="employerForm"
+                name="employerForm"
+                validate="false"
+                input="/jsp/employer/edit.jsp"
+                type="org.springframework.web.struts.DelegatingActionProxy">
             <forward name="edit" path="/jsp/employer/edit.jsp"/>
-            <forward name="create" path="/jsp/employer/create.jsp"/>
+        </action>
+
+        <action path="/customer/employee/save"
+                attribute="employerForm"
+                name="employerForm"
+                input="/jsp/employer/create.jsp"
+                validate="true"
+                type="org.springframework.web.struts.DelegatingActionProxy">
+            <forward name="list" path="/jsp/employer/list.jsp"/>
+        </action>
+
+        <action path="/customer/employee/delete"
+                type="org.springframework.web.struts.DelegatingActionProxy">
+            <forward name="list" path="/jsp/employer/list.jsp"/>
         </action>
 
         <action path="/office"

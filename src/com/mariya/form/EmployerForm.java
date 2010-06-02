@@ -1,12 +1,12 @@
 package com.mariya.form;
 
-import com.mariya.entity.Office;
+import org.apache.struts.action.ActionMapping;
+import org.apache.struts.validator.ValidatorForm;
 
-import java.math.BigDecimal;
+import javax.servlet.http.HttpServletRequest;
+import java.io.Serializable;
 
-import org.apache.struts.action.ActionForm;
-
-public class EmployerForm extends ActionForm {
+public class EmployerForm  extends ValidatorForm implements Serializable {
 
     private Long id;
     private String firstName;
@@ -17,8 +17,10 @@ public class EmployerForm extends ActionForm {
     private Long office;
     private String title;
     private Long manager;
-    private BigDecimal quota;
-    private BigDecimal sales;
+    private Float quota;
+    private Float sales;
+    private String username;
+    private String password;
 
     public Long getId() {
         return id;
@@ -60,19 +62,19 @@ public class EmployerForm extends ActionForm {
         this.manager = manager;
     }
 
-    public BigDecimal getQuota() {
+    public Float getQuota() {
         return quota;
     }
 
-    public void setQuota(BigDecimal quota) {
+    public void setQuota(Float quota) {
         this.quota = quota;
     }
 
-    public BigDecimal getSales() {
+    public Float getSales() {
         return sales;
     }
 
-    public void setSales(BigDecimal sales) {
+    public void setSales(Float sales) {
         this.sales = sales;
     }
 
@@ -106,5 +108,39 @@ public class EmployerForm extends ActionForm {
 
     public void setMail(String mail) {
         this.mail = mail;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    @Override
+    public void reset(ActionMapping mapping, HttpServletRequest request) {
+        super.reset(mapping, request);
+        id = null;
+        firstName = "";
+        lastName = "";
+        phone = "";
+        mail = "" ;
+        age = null ;
+        office = null;
+        title = "";
+        manager = null;
+        quota = null;
+        sales = null;
+        username = null;
+        password = null;
     }
 }

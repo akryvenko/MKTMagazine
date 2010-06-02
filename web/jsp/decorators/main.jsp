@@ -54,7 +54,7 @@
                 <% }
                    if (userRole.equalsIgnoreCase("ROLE_ADMIN") || userRole.equalsIgnoreCase("ROLE_CUSTOMER")) {
                 %>
-                <li><a href="<c:url value="/employer.do"><c:param name="action" value="list"/></c:url>">Список працiвникiв</a></li>
+                <li><a href="<c:url value="/customer/employee/list.do"></c:url>">Список працiвникiв</a></li>
                 <% }
                    if (userRole.equalsIgnoreCase("ROLE_ADMIN") || userRole.equalsIgnoreCase("ROLE_CUSTOMER")) {
                 %>

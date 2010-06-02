@@ -63,4 +63,14 @@ public class ProductForm extends ValidatorForm implements Serializable {
     public void setCount(int count) {
         this.count = count;
     }
+
+    @Override
+    public void reset(ActionMapping mapping, HttpServletRequest request) {
+        super.reset(mapping, request);
+        id = null;
+        name = "";
+        description = "";
+        count = 0;
+        cost = null;
+    }
 }

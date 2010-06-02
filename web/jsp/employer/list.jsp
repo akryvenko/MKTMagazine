@@ -13,7 +13,7 @@
   <head><title>Список Працiвникiв</title></head>
   <body>
   <div class="buttonBar">
-        <span class="menuButton"><a class="create" href="<c:url value="/employer.do"><c:param name="action" value="create"/></c:url>">Новий працiвник</a></span>
+        <span class="menuButton"><a class="create" href="<c:url value="/customer/employee/new.do"/>">Новий працiвник</a></span>
   </div>
   <div class="body">
     <h1>Список Працiвникiв</h1>
@@ -56,10 +56,8 @@
             </td>
             <td>
 
-                <a class="actionEdit" href="<c:url value="/employer.do"><c:param name="employerId" value="${viewBeanl.id}"/><c:param name="action" value="edit"/></c:url>">Редагувати</a>
-
-
-               <a class="actionCancel" href="<c:url value="/employer.do"><c:param name="employerId" value="${viewBeanl.id}"/><c:param name="action" value="delete"/></c:url>">Видалити</a>
+                <a class="actionEdit" href="<c:url value="/customer/employee/edit.do"><c:param name="employerId" value="${viewBeanl.id}"/></c:url>">Редагувати</a>
+               <a class="actionCancel" href="<c:url value="/customer/employee/delete.do"><c:param name="employerId" value="${viewBeanl.id}"/></c:url>">Видалити</a>
 
             </td>
         </tr>

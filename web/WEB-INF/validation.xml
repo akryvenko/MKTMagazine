@@ -6,59 +6,82 @@
 
 
 <form-validation>
-   <formset>
-       <form name="registrationCustomerForm">
-         <field property="firstName" depends="required">
-             <arg position="0" key="register.customer.form.firstname"/>
-         </field>
-         <field property="lastName" depends="required">
-             <arg position="0" key="register.customer.form.lastName"/>
-         </field>
-         <field property="customerEmail" depends="required,email">
-             <arg position="0" key="register.customer.form.email"/>
-         </field>
-         <field property="customerPhone" depends="required">
-             <arg position="0" key="register.customer.form.customerPhone"/>
-         </field>
-         <field property="username" depends="required">
-             <arg position="0" key="register.customer.form.login"/>
-         </field>
-         <field property="password" depends="required">
-             <arg position="0" key="register.customer.form.password"/>
-         </field>
-         <field property="credit" depends="required,double">
-             <arg position="0" key="register.customer.form.credit"/>
-         </field>
+    <formset>
+        <form name="registrationCustomerForm">
+            <field property="firstName" depends="required">
+                <arg position="0" key="register.customer.form.firstname"/>
+            </field>
+            <field property="lastName" depends="required">
+                <arg position="0" key="register.customer.form.lastName"/>
+            </field>
+            <field property="customerEmail" depends="required,email">
+                <arg position="0" key="register.customer.form.email"/>
+            </field>
+            <field property="customerPhone" depends="required">
+                <arg position="0" key="register.customer.form.customerPhone"/>
+            </field>
+            <field property="username" depends="required">
+                <arg position="0" key="register.customer.form.login"/>
+            </field>
+            <field property="password" depends="required">
+                <arg position="0" key="register.customer.form.password"/>
+            </field>
+            <field property="credit" depends="required,double">
+                <arg position="0" key="register.customer.form.credit"/>
+            </field>
 
-         <field property="organizationName" depends="required">
-             <arg position="0" key="register.customer.form.organizationName"/>
-         </field>
-         <field property="city" depends="required">
-             <arg position="0" key="register.customer.form.city"/>
-         </field>
-         <field property="address" depends="required">
-             <arg position="0" key="register.customer.form.address"/>
-         </field>
-         <field property="organizationEmail" depends="required,email">
-             <arg position="0" key="register.customer.form.organizationEmail"/>
-         </field>
-         <field property="organizationPhone" depends="required">
-             <arg position="0" key="register.customer.form.organizationPhone"/>
-         </field>
-      </form>
-      <form name="customerForm">
-         
-      </form>
-      <form name="productForm">
-          <field property="name" depends="required">
-             <arg position="0" key="new.product.form.product.name"/>
-         </field>
-          <field property="cost" depends="required">
-             <arg position="0" key="new.product.form.product.cost"/>
-         </field>
-         <field property="count" depends="required">
-             <arg position="0" key="new.product.form.product.count"/>
-         </field>
-      </form>
-   </formset>
+            <field property="organizationName" depends="required">
+                <arg position="0" key="register.customer.form.organizationName"/>
+            </field>
+            <field property="city" depends="required">
+                <arg position="0" key="register.customer.form.city"/>
+            </field>
+            <field property="address" depends="required">
+                <arg position="0" key="register.customer.form.address"/>
+            </field>
+            <field property="organizationEmail" depends="required,email">
+                <arg position="0" key="register.customer.form.organizationEmail"/>
+            </field>
+            <field property="organizationPhone" depends="required">
+                <arg position="0" key="register.customer.form.organizationPhone"/>
+            </field>
+        </form>
+        <form name="customerForm">
+
+        </form>
+        <form name="productForm">
+            <field property="name" depends="required">
+                <arg position="0" key="new.product.form.product.name"/>
+            </field>
+            <field property="cost" depends="required">
+                <arg position="0" key="new.product.form.product.cost"/>
+            </field>
+            <field property="count" depends="required">
+                <arg position="0" key="new.product.form.product.count"/>
+            </field>
+        </form>
+        <form name="employerForm">
+            <field property="firstName" depends="required">
+                <arg position="0" key="new.employye.form.first.name"/>
+            </field>
+            <field property="lastName" depends="required">
+                <arg position="0" key="new.employye.form.last.name"/>
+            </field>
+            <field property="mail" depends="required,email">
+                <arg position="0" key="new.employye.form.mail"/>
+            </field>
+            <field property="phone" depends="required">
+                <arg position="0" key="new.employye.form.phone"/>
+            </field>
+            <field property="office" depends="required">
+                <arg position="0" key="new.employye.form.office"/>
+            </field>
+            <field property="quota" depends="required">
+                <arg position="0" key="new.employye.form.quota"/>
+            </field>
+            <field property="sales" depends="required">
+                <arg position="0" key="new.employye.form.sales"/>
+            </field>
+        </form>
+    </formset>
 </form-validation>
