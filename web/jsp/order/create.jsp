@@ -4,15 +4,9 @@
 <%@ taglib prefix="html" uri="http://struts.apache.org/tags-html" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<jsp:useBean id="customer" scope="request" type="com.mariya.entity.Customer"/>
-<jsp:useBean id="employers" scope="request" type="java.util.Collection"/>
-<jsp:useBean id="product" scope="request" type="com.mariya.entity.Product"/>
+<jsp:useBean id="employers" scope="session" type="java.util.Collection"/>
 
-<c:url value="/order.do" var="saveOrderUrl">
-    <c:param name="action" value="save"/>
-</c:url>
-
-<html>
+<thml:html>
 <head>
     <title>Оформлення замовлення</title>
     <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/yui/fonts/fonts-min.css"/>
@@ -75,68 +69,61 @@
 <div id="examplecontainer">
     <div class="body">
         <h1>Оформлення замовлення</h1>
-
-        <form name="orderForm" action="<c:out value="${saveOrderUrl}"/>" method="POST">
-            <input type="hidden" name="id" value="<c:out value="${null}"/>"/>
+         <div class="errors">
+            <html:errors/>
+        </div>
+        <html:form action="/customer/order/save" >
+            <html:hidden property="id"/>
             <table>
                 <tr class="prop">
                     <td valign="top" class="name">Дата Замовлення</td>
                     <td valign="top" class="value">
-                        <input type="text" id="date" name="date" value=""/>
-                        
+                        <span id="date">
+                            <html:text property="date"/>
+                         </span>
                         <div id="cal2Container"></div>
                     </td>
-
-
                 </tr>
                 <tr class="prop">
                     <td valign="top" class="name">Менежер</td>
                     <td valign="top" class="value">
-                        <select id="employee" name="employee" onChange="this.options[this.selectedIndex].value">
-                            <option value="null">Виберiть Менеджера</option>
-                            <c:forEach var="viewBeanl" items="${employers}">
-                                <option value="<c:out value="${viewBeanl.id}"/>"><c:out value="${viewBeanl.firstName}"/>&nbsp;<c:out value="${viewBeanl.lastName}"/></option>
-                            </c:forEach>
-                        </select>
+                        <html:select property="employee">
+                            <html:option value="">Виберiть Менеджера</html:option>
+                            <html:options collection="employers" property="id" labelProperty="fullName"/>
+                        </html:select>
                     </td>
                 </tr>
                 <tr>
                     <td valign="top" class="name">Продукт</td>
                     <td valign="top" class="value">
-                        <input type="hidden" name="product" value="<c:out value="${product.id}"/>"/>
-                        <c:out value="${product.name}"/>
+                        <html:hidden property="product"/>
+                        <html:text property="productName" readonly="true"/>
                     </td>
                 </tr>
                 <tr>
                     <td valign="top" class="name">Ціна Продукту</td>
                     <td valign="top" class="value">
-                        <input type="hidden" name="price" value="<c:out value="${product.price}"/>"/>
-                        <c:out value="${product.price}"/>&nbsp;грн
+                        <html:text property="productPrice" readonly="true"/>&nbsp;грн
                     </td>
                 </tr>
                 <tr>
                     <td valign="top" class="name">Замовник</td>
                     <td valign="top" class="value">
-                        <input type="hidden" name="customer" value="<c:out value="${customer.id}"/>"/>
-                        <c:out value="${customer.firstName}"/>&nbsp;<c:out value="${customer.lastName}"/>
+                        <html:hidden property="customer" />
+                        <html:text property="customerName" readonly="true" />
                     </td>
                 </tr>
                 <tr class="prop">
-                    <td valign="top" class="name">Сума</td>
-                    <td valign="top" class="value"><input type="text" id="amount" name="amount"/></td>
-
-                </tr>
-                <tr class="prop">
                     <td valign="top" class="name">Кількість</td>
-                    <td valign="top" class="value"><input type="text" id="productCount" name="productCount"/></td>
+                    <td valign="top" class="value"><html:text property="productCount"/></td>
 
                 </tr>
             </table>
             <div class="buttons">
-                <span class="button"><input class="save" type="submit" value="Оформити"/></span>
+                <span class="button"><html:submit styleClass="save" value="Оформити"/></span>
             </div>
-        </form>
+        </html:form>
     </div>
 </div>
 </body>
-</html>
+</thml:html>

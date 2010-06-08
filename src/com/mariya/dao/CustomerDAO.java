@@ -30,6 +30,10 @@ public class CustomerDAO extends BaseDAO {
             customer.getUser().getAuthority().setId(getNextVal(AUTHORITY_SEQUENCE));
         }
 
+        if (customer.getOffice().getId() == null){
+            customer.getOffice().setId(getNextVal(OFFICE_SEQUENCE));
+        }
+
        saveOrUpdateEntity(customer);
 
        return findById(customer.getId()); 

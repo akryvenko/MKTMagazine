@@ -5,7 +5,6 @@ import com.mariya.entity.Office;
 import java.util.List;
 
 public class OfficeDAO extends BaseDAO {
-    private static String OFFICE_SEQUENCE = "off_id_seq";
 
     public List<Office> findAll() {
         List all = findAll(Office.class);

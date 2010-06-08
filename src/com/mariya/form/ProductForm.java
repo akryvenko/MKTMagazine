@@ -3,6 +3,7 @@ package com.mariya.form;
 import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionMapping;
+import org.apache.struts.upload.FormFile;
 import org.apache.struts.validator.ValidatorForm;
 
 import javax.servlet.http.HttpServletRequest;
@@ -16,6 +17,8 @@ public class ProductForm extends ValidatorForm implements Serializable {
     private String description = "";
     private Float cost;
     private int count;
+    private FormFile productImage;
+    private Boolean active;
 
     @Override
     public ActionErrors validate(ActionMapping mapping, HttpServletRequest request) {
@@ -64,6 +67,22 @@ public class ProductForm extends ValidatorForm implements Serializable {
         this.count = count;
     }
 
+    public FormFile getProductImage() {
+        return productImage;
+    }
+
+    public void setProductImage(FormFile productImage) {
+        this.productImage = productImage;
+    }
+
+    public Boolean getActive() {
+        return active;
+    }
+
+    public void setActive(Boolean active) {
+        this.active = active;
+    }
+
     @Override
     public void reset(ActionMapping mapping, HttpServletRequest request) {
         super.reset(mapping, request);
@@ -72,5 +91,6 @@ public class ProductForm extends ValidatorForm implements Serializable {
         description = "";
         count = 0;
         cost = null;
+        active = true;
     }
 }

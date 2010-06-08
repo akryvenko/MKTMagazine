@@ -45,5 +45,9 @@ public class Constants {
     public static final String REGISTER = "register";
     public static final String SIGNUP = "signup";
     public static final String ORDER_PRODUCT_ACTION = "order_product";
+    public static final String UPLOAD_DIRECTORY = "/upload";
+    public static final String REPORT_DIRECTORY = "/report";
+
+    public static final String STATUS = "status";
 }
 

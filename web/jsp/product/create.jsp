@@ -16,7 +16,7 @@
         <div class="errors">
             <html:errors/>
         </div>
-        <html:form action="/product/save" >
+        <html:form action="/product/save" enctype="multipart/form-data" >
         <input type="hidden" name="id" value="<c:out value="${null}"/>"/>    
         <table>
             <tr class="prop">
@@ -34,6 +34,10 @@
             <tr class="prop">
                 <td valign="top" class="name">Опис продукту</td>
                 <td valign="top" class="value"><html:textarea property="description" rows="3" cols="10"/></td>
+            </tr>
+            <tr class="prop">
+                <td valign="top" class="name">Фото продукту</td>
+                <td valign="top" class="value"><html:file  property="productImage"/></td>
             </tr>
         </table>
           <div class="buttons">

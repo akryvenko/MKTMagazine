@@ -37,11 +37,10 @@ public class Office {
     private BigDecimal target;
 
     @Basic
-    private BigDecimal sales;
+    private int active;
 
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "customer_id")
-    private Customer customer;
+    @Basic
+    private BigDecimal sales;
 
     public Long getId() {
         return id;
@@ -92,14 +91,6 @@ public class Office {
         this.employees = employees;
     }
 
-    public Customer getCustomer() {
-        return customer;
-    }
-
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
-    }
-
     public void populate(Office office) {
         this.name = office.getName();
         this.address = office.getAddress();
@@ -109,6 +100,7 @@ public class Office {
         this.region = office.getRegion();
         this.target = office.getTarget();
         this.sales = office.getSales();
+        this.active = office.getActive();
     }
 
     public String getName() {
@@ -141,5 +133,13 @@ public class Office {
 
     public void setMail(String mail) {
         this.mail = mail;
+    }
+
+    public int getActive() {
+        return active;
+    }
+
+    public void setActive(int active) {
+        this.active = active;
     }
 }

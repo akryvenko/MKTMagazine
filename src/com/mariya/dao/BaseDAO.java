@@ -17,6 +17,7 @@ public class BaseDAO extends HibernateDaoSupport {
     protected static String CUSTOMER_SEQUENCE = "cust_id_seq";
     protected static String USER_SEQUENCE = "user_id_seq";
     protected static String AUTHORITY_SEQUENCE = "auth_id_seq";
+    protected static String OFFICE_SEQUENCE = "off_id_seq";
 
     protected Object getEntityById(Class clazz, Serializable id)
 	{

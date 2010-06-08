@@ -11,70 +11,30 @@
   <head><title>Список продуктів</title></head>
   <body>
 <div class="body">
-    <h1>Список продуктів</h1>
+    <c:forEach var="product" items="${products}" varStatus="i" >
+        <div class="el_preview">
+            <img src="<%= request.getContextPath() %> <c:out value="${product.imagePath}"/> "/>
 
-        <%
-          Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-          if (!(auth.getPrincipal() instanceof String)) {
-               String userRole = ((UserDetails) auth.getPrincipal()).getAuthorities()[0].getAuthority();
-             if (userRole.equalsIgnoreCase("ROLE_PRODUCT_MANAGER")) { %>
-                <div class="buttonBar">
-                    <span class="menuButton"><a class="create" href="<c:url value="/product/new.do"/>">Новий продукт</a></span>
-                </div>
-        <%
-             }
-          }
-        %>
+            <h1 class="el_title">
+                <c:out value="${product.name}"/>
+            </h1>
+            <small>
+                Ціна продукту&nbsp;:&nbsp;<c:out value="${product.price}"/>&nbsp;грн.
+                &nbsp;-&nbsp;Доступна кількість&nbsp;:&nbsp;<c:out value="${product.count}"/>  
+            </small>
+            <div class="el_summary">
+                <p> 
+                    <c:out value="${product.description}"/>
+                </p>
+            </div>
 
-      <div class="list">
-      <table>
-        <thead>
-            <tr>
-                <th>Назва Продукту</th>
-                <th>Ціна Продукту</th>
-                <th>На складі</th>
-                <th>Дія</th>
-            </tr>
-	    </thead>
-      <c:forEach var="product" items="${products}" varStatus="i" >
-        <tr>
-            <td>
-                 <c:out value="${product.name}"/>
-            </td>
-            <td>
-                 <c:out value="${product.price}"/>
-            </td>
-            <td>
-                 <c:out value="${product.count}"/>
-            </td>
-            <td>
-            <%
+            <div class="el_actions">
+                <a class="actionOrder" href="<c:url value="/customer/order/new.do"><c:param name="productId" value="${product.id}"/></c:url>">Замовити</a>
+            </div>
 
-              if (!(auth.getPrincipal() instanceof String)) {
-                   String userRole = ((UserDetails) auth.getPrincipal()).getAuthorities()[0].getAuthority();
-                 if (userRole.equalsIgnoreCase("ROLE_PRODUCT_MANAGER")) {
-            %>
-                    
-                <a class="actionEdit" href="<c:url value="/product.do"><c:param name="productId" value="${product.id}"/><c:param name="action" value="edit"/></c:url>">Редагувати</a>
-                <a class="actionCancel" href="<c:url value="/product.do"><c:param name="productId" value="${product.id}"/><c:param name="action" value="delete"/></c:url>">Видалити</a></span>
-
-            <%
-                    } else {
-                        %>
-                            <a class="actionOrder" href="<c:url value="/customer/order.do"><c:param name="productId" value="${product.id}"/><c:param name="action" value="create"/></c:url>">Замовити</a
-                        <%
-                    }
-                } else {
-            %>
-               <a class="actionOrder" href="<c:url value="/customer/order.do"><c:param name="productId" value="${product.id}"/><c:param name="action" value="create"/></c:url>">Замовити</a></span>
-            <%
-               }
-            %>
-            </td>
-        </tr>
-      </c:forEach>
-      </table>
-      </div>
+            <div style="clear: both;"></div>
+        </div>
+    </c:forEach>
    </div>
   </body>
 </html>

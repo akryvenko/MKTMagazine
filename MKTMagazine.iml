@@ -59,6 +59,7 @@
     <orderEntry type="library" name="spring-2.5.5" level="project" />
     <orderEntry type="library" name="user_lib" level="project" />
     <orderEntry type="library" name="uslib" level="project" />
+    <orderEntry type="library" name="poi-3.6" level="project" />
   </component>
 </module>
 

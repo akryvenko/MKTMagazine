@@ -92,6 +92,14 @@ public class OfficeForm extends ValidatorForm implements Serializable {
         this.mail = mail;
     }
 
+    public Boolean getActive() {
+        return active;
+    }
+
+    public void setActive(Boolean active) {
+        this.active = active;
+    }
+
     private Long id;
     private String name;
     private String city;
@@ -102,6 +110,7 @@ public class OfficeForm extends ValidatorForm implements Serializable {
     private String address;
     private String phone;
     private String mail;
+    private boolean active;
 
     @Override
     public void reset(ActionMapping mapping, HttpServletRequest request) {
@@ -116,6 +125,7 @@ public class OfficeForm extends ValidatorForm implements Serializable {
         address = "";
         phone = "";
         mail = "";
+        active = true;
 
     }
 }

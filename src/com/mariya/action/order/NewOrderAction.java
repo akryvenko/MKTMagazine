@@ -1,12 +1,11 @@
-package com.mariya.action.employee;
+package com.mariya.action.order;
 
+import com.mariya.dao.CustomerDAO;
 import com.mariya.dao.EmployerDAO;
-import com.mariya.dao.OfficeDAO;
-import com.mariya.entity.CustomUser;
-import com.mariya.entity.Customer;
-import com.mariya.entity.Employer;
-import com.mariya.entity.Office;
-import com.mariya.form.EmployerForm;
+import com.mariya.dao.OrderDAO;
+import com.mariya.dao.ProductDAO;
+import com.mariya.entity.*;
+import com.mariya.form.OrderForm;
 import com.mariya.utils.Constants;
 import com.mariya.utils.Utils;
 import org.acegisecurity.context.SecurityContextHolder;
@@ -19,7 +18,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
-public class NewEmployeeAction extends Action {
+public class NewOrderAction extends Action {
 
     public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) {
 
@@ -30,13 +29,21 @@ public class NewEmployeeAction extends Action {
             customer = (Customer) userInfo;
         }
 
-        EmployerForm employerForm = (EmployerForm) form;
-        employerForm.setOffice(customer.getOffice().getId());
-
         List<Employer> employers = getEmployerDAO().findAllByOfficeID(customer.getOffice().getId());
         request.getSession().setAttribute(Constants.EMPLOYER_LIST, employers);
 
-        return mapping.findForward("success");
+        Long productId = Utils.getLongParameter(request, Constants.PRODUCT_ID);
+        Product product = getProductDAO().findById(productId);
+
+        OrderForm orderForm = (OrderForm)form;
+        orderForm.setProduct(product.getId());
+        orderForm.setProductName(product.getName());
+        orderForm.setProductPrice(product.getPrice().floatValue());
+
+        orderForm.setCustomer(customer.getId());
+        orderForm.setCustomerName(customer.getOffice().getName());
+
+        return mapping.findForward("create");
     }
 
     public EmployerDAO getEmployerDAO() {
@@ -47,16 +54,14 @@ public class NewEmployeeAction extends Action {
         this.employerDAO = employerDAO;
     }
 
+    public ProductDAO getProductDAO() {
+        return productDAO;
+    }
+
+    public void setProductDAO(ProductDAO productDAO) {
+        this.productDAO = productDAO;
+    }
+
     private EmployerDAO employerDAO;
-
-    public OfficeDAO getOfficeDAO() {
-        return officeDAO;
-    }
-
-    public void setOfficeDAO(OfficeDAO officeDAO) {
-        this.officeDAO = officeDAO;
-    }
-
-    private OfficeDAO officeDAO;
-
+    private ProductDAO productDAO;
 }

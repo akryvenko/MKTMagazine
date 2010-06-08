@@ -48,6 +48,13 @@
                 <td valign="top" class="name">Салес</td>
                 <td valign="top" class="value"><html:text property="sales"/></td>
             </tr>
+            <tr class="prop">
+                <td valign="top" class="name">Активний</td>
+                <td valign="top" class="value">
+                    <html:radio property="active" value="true"/> Так <br/>
+                    <html:radio property="active" value="false"/> Ні
+                </td>
+            </tr>
         </table>
         <div class="buttons">
             <span class="button"><input class="save" type="submit" value="Зберегти"/></span>

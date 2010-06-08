@@ -14,7 +14,6 @@ public class CustomerForm extends DynaValidatorForm {
     private String firstName;
     private String lastName;
     private Long employer;
-    private BigDecimal credit;
 
     public Long getId() {
         return id;
@@ -30,14 +29,6 @@ public class CustomerForm extends DynaValidatorForm {
 
     public void setEmployer(Long employer) {
         this.employer = employer;
-    }
-
-    public BigDecimal getCredit() {
-        return credit;
-    }
-
-    public void setCredit(BigDecimal credit) {
-        this.credit = credit;
     }
 
     public String getFirstName() {

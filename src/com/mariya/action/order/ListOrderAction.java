@@ -1,10 +1,10 @@
-package com.mariya.action.office;
+package com.mariya.action.order;
 
-import com.mariya.dao.EmployerDAO;
-import com.mariya.dao.OfficeDAO;
+import com.mariya.dao.OrderDAO;
 import com.mariya.entity.CustomUser;
 import com.mariya.entity.Customer;
 import com.mariya.entity.Employer;
+import com.mariya.entity.Order;
 import com.mariya.utils.Constants;
 import org.acegisecurity.context.SecurityContextHolder;
 import org.apache.struts.action.Action;
@@ -16,30 +16,32 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
-public class NewOfficeAction extends Action {
+public class ListOrderAction extends Action {
 
     public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) {
 
         Customer customer = null;
+        Employer employee = null;
 
         Object userInfo = ((CustomUser) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getUserInfo();
         if (userInfo instanceof Customer) {
             customer = (Customer) userInfo;
         }
 
-        List<Employer> employers = getEmployerDAO().findAllByOfficeID(customer.getOffice().getId());
-        request.getSession().setAttribute(Constants.EMPLOYER_LIST, employers);
+        List<Order> orders = getOrderDAO().findAllByOfficeID(customer.getOffice().getId());
+        request.setAttribute(Constants.ORDER_LIST, orders);
 
-        return mapping.findForward("create");
+        return mapping.findForward("list");
     }
 
-    public EmployerDAO getEmployerDAO() {
-        return employerDAO;
+
+    public OrderDAO getOrderDAO() {
+        return orderDAO;
     }
 
-    public void setEmployerDAO(EmployerDAO employerDAO) {
-        this.employerDAO = employerDAO;
+    public void setOrderDAO(OrderDAO orderDAO) {
+        this.orderDAO = orderDAO;
     }
 
-    private EmployerDAO employerDAO;
+    private OrderDAO orderDAO;
 }

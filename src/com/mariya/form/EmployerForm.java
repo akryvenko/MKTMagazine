@@ -21,6 +21,7 @@ public class EmployerForm  extends ValidatorForm implements Serializable {
     private Float sales;
     private String username;
     private String password;
+    private boolean active;
 
     public Long getId() {
         return id;
@@ -126,6 +127,14 @@ public class EmployerForm  extends ValidatorForm implements Serializable {
         this.password = password;
     }
 
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
+    }
+
     @Override
     public void reset(ActionMapping mapping, HttpServletRequest request) {
         super.reset(mapping, request);
@@ -142,5 +151,6 @@ public class EmployerForm  extends ValidatorForm implements Serializable {
         sales = null;
         username = null;
         password = null;
+        active = true;
     }
 }

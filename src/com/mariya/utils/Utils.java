@@ -1,11 +1,10 @@
 package com.mariya.utils;
 
 import com.mariya.entity.*;
-import com.mariya.enums.UserRoles;
+import com.mariya.enums.OrderStatus;
 import com.mariya.form.*;
 import com.mariya.dao.EmployerDAO;
 import com.mariya.dao.ProductDAO;
-import com.mariya.dao.CustomerDAO;
 import com.mariya.dao.OfficeDAO;
 
 import javax.servlet.http.HttpServletRequest;
@@ -51,6 +50,7 @@ public class Utils {
         product.setPrice(new BigDecimal(productForm.getCost()));
         product.setName(productForm.getName());
         product.setCount(productForm.getCount());
+        product.setActive(productForm.getActive() ? 1 : 0);
         return product;
     }
 
@@ -68,9 +68,9 @@ public class Utils {
         office.setAddress(officeForm.getAddress());
         office.setMail(officeForm.getMail());
         office.setPhone(officeForm.getPhone());
-        office.setCustomer(customer);
         office.setTarget(new BigDecimal(officeForm.getTarget()));
         office.setSales(new BigDecimal(officeForm.getSales()));
+        office.setActive(officeForm.getActive() ? 1 : 0);
         return office;
     }
 
@@ -93,6 +93,7 @@ public class Utils {
         employer.setOffice(employerForm.getOffice() > 0 ? officeDAO.findById(employerForm.getOffice()) : null);
         employer.setQuota(new BigDecimal(employerForm.getQuota()));
         employer.setSales(new BigDecimal(employerForm.getSales()));
+        employer.setActive(employerForm.isActive() ? 1 : 0 );
         return employer;
     }
 
@@ -104,10 +105,7 @@ public class Utils {
         } else {
             customer.setId(null);
         }
-
-        customer.setFirstName(customerForm.getFirstName());
-        customer.setLastName(customerForm.getLastName());
-        customer.setCredit(customerForm.getCredit());
+        
         return customer;
     }
 
@@ -134,10 +132,28 @@ public class Utils {
         }
 
         order.setDate(convertStringToDate(orderForm.getDate()));
-        order.setEmployee(orderForm.getEmployee() > 0 ? employerDAO.findById(orderForm.getEmployee()) : null);
-        order.setProductCount(orderForm.getProductCount());
-        order.setProduct(orderForm.getProduct() > 0 ? productDAO.findById(orderForm.getProduct()) : null);
-        order.setAmount(orderForm.getAmount());
+        order.setEmployee(employerDAO.findById(new Long(orderForm.getEmployee())));
+        order.setProductCount(new Integer(orderForm.getProductCount()));
+
+        Product product = null;
+
+        if (orderForm.getProduct() > 0 ) {
+            product = productDAO.findById(orderForm.getProduct());
+        }
+        order.setProduct(product);
+
+        BigDecimal amount = new BigDecimal(orderForm.getProductCount());
+        amount = amount.multiply(product.getPrice());
+
+        order.setAmount(amount);
+
+         if (orderForm.getStatus() == null) {
+             order.setStatus(OrderStatus.InProgress.getStatusValue());
+         } else {
+             order.setStatus(orderForm.getStatus());
+         }
+
+
         return order;
     }
 

@@ -5,10 +5,12 @@ import com.mariya.entity.Product;
 import com.mariya.form.ProductForm;
 import com.mariya.utils.Constants;
 import com.mariya.utils.Utils;
+import org.apache.commons.validator.Form;
 import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
+import org.apache.struts.upload.FormFile;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -34,7 +36,10 @@ public class EditProductAction extends Action {
         productForm.setId(product.getId());
         productForm.setName(product.getName());
         productForm.setCost(product.getPrice().floatValue());
-        productForm.setCount(product.getCount());
+        Integer count = product.getCount();
+        productForm.setCount(count == null ? 0 : count);
+        productForm.setActive(product.getActive() == 1);
+//        productForm.setProductImage(new FormFile());
         
         return mapping.findForward("edit");
     }

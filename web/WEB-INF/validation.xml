@@ -26,9 +26,6 @@
             <field property="password" depends="required">
                 <arg position="0" key="register.customer.form.password"/>
             </field>
-            <field property="credit" depends="required,double">
-                <arg position="0" key="register.customer.form.credit"/>
-            </field>
 
             <field property="organizationName" depends="required">
                 <arg position="0" key="register.customer.form.organizationName"/>
@@ -73,9 +70,6 @@
             <field property="phone" depends="required">
                 <arg position="0" key="new.employye.form.phone"/>
             </field>
-            <field property="office" depends="required">
-                <arg position="0" key="new.employye.form.office"/>
-            </field>
             <field property="quota" depends="required">
                 <arg position="0" key="new.employye.form.quota"/>
             </field>
@@ -109,6 +103,16 @@
                 <arg position="0" key="office.form.sales"/>
             </field>
         </form>
-
+        <form name="orderForm">
+            <field property="date" depends="required">
+                <arg position="0" key="order.form.date"/>
+            </field>
+            <field property="employee" depends="required">
+                <arg position="0" key="order.form.manager"/>
+            </field>
+            <field property="productCount" depends="required,integer">
+                <arg position="0" key="order.form.productCount"/>
+            </field>
+        </form>
     </formset>
 </form-validation>

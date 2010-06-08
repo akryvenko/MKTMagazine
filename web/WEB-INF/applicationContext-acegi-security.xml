@@ -121,6 +121,7 @@
 			    PATTERN_TYPE_APACHE_ANT
 			    /customer/**=ROLE_CUSTOMER
 			    /product/**=ROLE_PRODUCT_MANAGER
+			    /employee/**=ROLE_MANAGER
 				/**=ROLE_ANONYMOUS,ROLE_PRODUCT_MANAGER,ROLE_CUSTOMER,ROLE_MANAGER
          ]]></value>
       </property>

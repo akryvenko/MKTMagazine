@@ -1,5 +1,9 @@
 <decorators defaultdir="/jsp/decorators">
 
+    <excludes>
+        <pattern>/customer/report.do</pattern>
+    </excludes>
+
     <decorator name="main" page="main.jsp">
         <pattern>*</pattern>
     </decorator>

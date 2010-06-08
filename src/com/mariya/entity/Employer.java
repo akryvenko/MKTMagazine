@@ -41,6 +41,9 @@ public class Employer {
     private BigDecimal quota;
 
     @Basic
+    private int active;
+
+    @Basic
     private BigDecimal sales;
 
     @OneToMany(cascade = {CascadeType.ALL, CascadeType.MERGE}, fetch = FetchType.EAGER)
@@ -155,6 +158,14 @@ public class Employer {
         this.phone = phone;
     }
 
+    public int getActive() {
+        return active;
+    }
+
+    public void setActive(int active) {
+        this.active = active;
+    }
+
     public void populate(Employer employer) {
         this.firstName = employer.getFirstName();
         this.lastName = employer.getLastName();
@@ -166,6 +177,7 @@ public class Employer {
         this.manager = employer.getManager();
         this.quota = employer.getQuota();
         this.sales = employer.getSales();
+        this.active = employer.getActive();
     }
 
      public String getFullName(){

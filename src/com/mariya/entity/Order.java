@@ -28,6 +28,9 @@ public class Order {
     @Basic
     private Integer productCount;
 
+    @Basic
+    private Integer status;
+
     public Long getId() {
         return id;
     }
@@ -76,6 +79,13 @@ public class Order {
         this.productCount = productCount;
     }
 
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
 
     public void populate(Order order) {
         this.date = order.getDate();
@@ -83,6 +93,6 @@ public class Order {
         this.product = order.getProduct();
         this.amount = order.getAmount();
         this.productCount = order.getProductCount();
-
+        this.status = order.getStatus();
     }
 }

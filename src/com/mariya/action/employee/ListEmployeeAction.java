@@ -27,7 +27,7 @@ public class ListEmployeeAction extends Action {
             customer = (Customer) userInfo;
         }
 
-        List<Employer> employers = getEmployerDAO().findAllByCustomerID(customer.getId());
+        List<Employer> employers = getEmployerDAO().findAllByOfficeID(customer.getOffice().getId());
         request.setAttribute(Constants.EMPLOYER_LIST, employers);
 
         return mapping.findForward("list");

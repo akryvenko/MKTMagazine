@@ -35,11 +35,6 @@ public class RegisterCustomerAction extends BaseAction {
         RegistrationCustomerForm registrationCustomerForm = (RegistrationCustomerForm)form;
 
         Customer customer = new Customer();
-        customer.setFirstName(registrationCustomerForm.getFirstName());
-        customer.setLastName(registrationCustomerForm.getLastName());
-        customer.setMail(registrationCustomerForm.getCustomerEmail());
-        customer.setPhone(registrationCustomerForm.getCustomerPhone());
-        customer.setCredit(new BigDecimal(registrationCustomerForm.getCredit()));
 
         User user = new User();
         user.setUsername(registrationCustomerForm.getUsername());
@@ -48,17 +43,17 @@ public class RegisterCustomerAction extends BaseAction {
         user.setAuthority(new Authority(UserRoles.Customer.getRoleName()));
         customer.setUser(user);
 
-        customer = getCustomerDAO().save(customer);
-
         Office office = new Office();
         office.setName(registrationCustomerForm.getOrganizationName());
         office.setCity(registrationCustomerForm.getCity());
         office.setAddress(registrationCustomerForm.getAddress());
         office.setPhone(registrationCustomerForm.getOrganizationPhone());
         office.setMail(registrationCustomerForm.getOrganizationEmail());
-        office.setCustomer(customer);
+        customer.setOffice(office);
 
-        office = officeDAO.save(office);
+        customer = getCustomerDAO().save(customer);
+
+        office = customer.getOffice();
 
         Employer employee = new Employer();
         employee.setFirstName(registrationCustomerForm.getFirstName());

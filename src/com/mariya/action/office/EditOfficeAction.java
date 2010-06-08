@@ -43,6 +43,7 @@ public class EditOfficeAction extends Action {
         officeForm.setMail(office.getMail());
         officeForm.setTarget(office.getTarget().longValue());
         officeForm.setSales(office.getSales().longValue());
+        officeForm.setActive(office.getActive() == 1);
 
         return mapping.findForward("edit");
     }

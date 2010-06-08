@@ -47,41 +47,36 @@
                    if (userRole.equalsIgnoreCase("ROLE_ADMIN")) {
                 %>
                 <li><a href="<c:url value="/customer.do"><c:param name="action" value="list"/></c:url>">Список замовникiв</a></li>
-                <% }
-                   if (userRole.equalsIgnoreCase("ROLE_ADMIN") || userRole.equalsIgnoreCase("ROLE_CUSTOMER")) {
-                %>
-                <li><a href="<c:url value="/welcome.do"/>">Список продуктів</a></li>
-                <% }
-                   if (userRole.equalsIgnoreCase("ROLE_ADMIN") || userRole.equalsIgnoreCase("ROLE_CUSTOMER")) {
+                <%  }
+                    if (userRole.equalsIgnoreCase("ROLE_ADMIN") || userRole.equalsIgnoreCase("ROLE_CUSTOMER")) {
                 %>
                 <li><a href="<c:url value="/customer/employee/list.do"></c:url>">Список працiвникiв</a></li>
                 <% }
+                   if (userRole.equalsIgnoreCase("ROLE_PRODUCT_MANAGER")) {
+                %>
+                <li><a href="<c:url value="/product/list.do"></c:url>">Список продуктів</a></li>
+                <% }
                    if (userRole.equalsIgnoreCase("ROLE_ADMIN") || userRole.equalsIgnoreCase("ROLE_CUSTOMER")) {
                 %>
-                <li><a href="<c:url value="/customer/office/list.do"/>">Список офiсiв</a></li>
-                <% }
-                   if (userRole.equalsIgnoreCase("ROLE_ADMIN") || userRole.equalsIgnoreCase("ROLE_CUSTOMER") || userRole.equalsIgnoreCase("ROLE_MANAGER")) {
-                %>
 
-                <li><a href="<c:url value="/order.do"><c:param name="action" value="list"/></c:url>">Список замовлень</a></li>
+                <li><a href="<c:url value="/customer/order/list.do"/>">Список замовлень</a></li>
                 <%
                     }
                 %>
 
-                 <li><a href="<c:url value="/setings.do" />">Налаштування</a></li>
-
-
+                 <li><a href="<c:url value="/jsp/customer/report_list.jsp"/>">Звіти</a></li>
             <%
                 }
             %>
             </ul>
         </div>
-    </div>
-    <div id="content">
-        <decorator:body/>
+        <div id="content">
+            <decorator:body/>
+        </div>
+
+        <div style="clear: both"/>
     </div>
 
-    <div style="clear: both"/>
 </div>
 </div>
 <div id="footer">

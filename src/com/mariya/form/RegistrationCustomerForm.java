@@ -20,7 +20,6 @@ public class RegistrationCustomerForm extends ValidatorForm implements Serializa
     private String customerPhone;
     private String username;
     private String password;
-    private Float credit;
 
     private String organizationName;
     private String city;
@@ -74,14 +73,6 @@ public class RegistrationCustomerForm extends ValidatorForm implements Serializa
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public Float getCredit() {
-        return credit;
-    }
-
-    public void setCredit(Float credit) {
-        this.credit = credit;
     }
 
     public String getOrganizationName() {

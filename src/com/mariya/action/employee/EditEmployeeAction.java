@@ -40,19 +40,22 @@ public class EditEmployeeAction extends Action {
         employerForm.setMail(employee.getMail());
         employerForm.setPhone(employee.getPhone());
         employerForm.setAge(employee.getAge());
-        employerForm.setUsername(employee.getUser().getUsername());
-        employerForm.setPassword(employee.getUser().getPassword());
+
+        if (employee.getUser() != null) {
+            employerForm.setUsername(employee.getUser().getUsername());
+            employerForm.setPassword(employee.getUser().getPassword());
+        }
+
         employerForm.setOffice(employee.getOffice().getId());
         employerForm.setTitle(employee.getTitle());
         employerForm.setManager(employee.getManager() != null ? employee.getManager().getId() : null);
-        employerForm.setQuota(employee.getQuota().floatValue());
-        employerForm.setSales(employee.getSales().floatValue());
+        employerForm.setQuota(employee.getQuota() == null ? 0 : employee.getQuota().floatValue());
+        employerForm.setSales(employee.getSales() == null ? 0 : employee.getSales().floatValue());
+        employerForm.setActive(employee.getActive() == 1);
 
-        List<Employer> employers = getEmployerDAO().findAllByCustomerID(customer.getId());
+        List<Employer> employers = getEmployerDAO().findAllByOfficeID(customer.getOffice().getId());
         request.getSession().setAttribute(Constants.EMPLOYER_LIST, employers);
 
-        List<Office> offices = getOfficeDAO().findAllByCustomerID(customer.getId());
-        request.getSession().setAttribute(Constants.OFFICE_LIST, offices);
 
         return mapping.findForward("edit");
     }

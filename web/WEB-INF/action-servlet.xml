@@ -17,10 +17,17 @@
         <property name="productDAO" ref="productDAO"/>
     </bean>
 
+    <bean name="/product/list" class="com.mariya.action.product.ListProductAction">
+        <property name="productDAO" ref="productDAO"/>
+    </bean>
+
     <bean name="/product/edit" class="com.mariya.action.product.EditProductAction">
         <property name="productDAO" ref="productDAO"/>
     </bean>
 
+    <bean name="/product/edit/save" class="com.mariya.action.product.SaveProductAction">
+        <property name="productDAO" ref="productDAO"/>
+    </bean>
 
     <bean name="/customer/product" class="com.mariya.action.product.ProductAction">
         <property name="productDAO" ref="productDAO"/>
@@ -62,10 +69,6 @@
         <property name="officeDAO" ref="officeDAO"/>
     </bean>
 
-    <bean name="/customer/employee/delete" class="com.mariya.action.employee.DeleteEmployeeAction">
-        <property name="employerDAO" ref="employerDAO"/>
-    </bean>
-
     <!--Ofice actions-->
 
     <bean name="/customer/office/list" class="com.mariya.action.office.ListOfficeAction">
@@ -86,17 +89,39 @@
         <property name="officeDAO" ref="officeDAO"/>
     </bean>
 
-    <bean name="/order" class="com.mariya.action.order.OrderAction">
+    <!--Order actions-->
+
+    <bean name="/customer/order/list" class="com.mariya.action.order.ListOrderAction">
+        <property name="orderDAO" ref="orderDAO"/>
+    </bean>
+
+    <bean name="/customer/order/new" class="com.mariya.action.order.NewOrderAction">
+        <property name="employerDAO" ref="employerDAO"/>
+        <property name="productDAO" ref="productDAO"/>
+    </bean>
+
+    <bean name="/customer/order/save" class="com.mariya.action.order.SaveOrderAction">
         <property name="employerDAO" ref="employerDAO"/>
         <property name="customerDAO" ref="customerDAO"/>
         <property name="productDAO" ref="productDAO"/>
         <property name="orderDAO" ref="orderDAO"/>
     </bean>
 
-    <bean name="/customer/order" class="com.mariya.action.order.OrderAction">
+    <bean name="/customer/order/edit" class="com.mariya.action.order.EditOrderAction">
         <property name="employerDAO" ref="employerDAO"/>
         <property name="customerDAO" ref="customerDAO"/>
         <property name="productDAO" ref="productDAO"/>
+        <property name="orderDAO" ref="orderDAO"/>
+    </bean>
+
+    <bean name="/customer/order/edit/save" class="com.mariya.action.order.SaveOrderAction">
+        <property name="employerDAO" ref="employerDAO"/>
+        <property name="customerDAO" ref="customerDAO"/>
+        <property name="productDAO" ref="productDAO"/>
+        <property name="orderDAO" ref="orderDAO"/>
+    </bean>
+
+    <bean name="/employee/order/status" class="com.mariya.action.order.StatusOrderAction">
         <property name="orderDAO" ref="orderDAO"/>
     </bean>
 
@@ -111,7 +136,14 @@
     <bean name="/welcome" class="com.mariya.action.WelcomeAction">
         <property name="productDAO" ref="productDAO"/>
         <property name="customerDAO" ref="customerDAO"/>
+        <property name="orderDAO" ref="orderDAO"/>
     </bean>
+
+    <bean name="/customer/report" class="com.mariya.action.ReportAction">
+        <property name="orderDAO" ref="orderDAO"/>
+    </bean>
+
+
 
     <import resource="applicationContext.xml"/>
 </beans>

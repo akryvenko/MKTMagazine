@@ -13,7 +13,7 @@
     <div class="errors">
         <html:errors/>
     </div>
-    <html:form action="/product/save">
+    <html:form action="/product/edit/save" enctype="multipart/form-data">
         <html:hidden property="id" />
         <table>
             <tr class="prop">
@@ -29,9 +29,23 @@
                 <td valign="top" class="value"><html:text property="count"/></td>
             </tr>
             <tr class="prop">
+                <td valign="top" class="name">Активний</td>
+                <td valign="top" class="value"><html:checkbox property="active"/></td>
+            </tr>
             <tr class="prop">
                 <td valign="top" class="name">Опис продукту</td>
                 <td valign="top" class="value"><html:textarea property="description"  rows="3" cols="10"/></td>
+            </tr>
+            <tr class="prop">
+                <td valign="top" class="name">Фото продукту</td>
+                <td valign="top" class="value"><html:file  property="productImage"/></td>
+            </tr>
+            <tr class="prop">
+                <td valign="top" class="name">Активний</td>
+                <td valign="top" class="value">
+                    <html:radio property="active" value="true"/> Так <br/>
+                    <html:radio property="active" value="false"/> Ні
+                </td>
             </tr>
         </table>
         <div class="buttons">

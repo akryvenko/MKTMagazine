@@ -49,8 +49,8 @@ private static String EMPLOYER_SEQUENCE = "emp_id_seq";
         getSession().flush();
     }
 
-    public List<Employer> findAllByCustomerID(Long id) {
-        String query = "from Employer as emp where emp.office.customer.id = '" + id + "'";
+    public List<Employer> findAllByOfficeID(Long id) {
+        String query = "from Employer as emp where emp.office.id = '" + id + "'";
         List<Employer> result = executeQuery(query, new String[]{}, new Object[]{});
         getSession().flush();
         return result;

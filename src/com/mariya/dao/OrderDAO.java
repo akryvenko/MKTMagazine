@@ -31,9 +31,15 @@ public class OrderDAO extends BaseDAO {
         deleteEntityById(Order.class, orderId);
     }
 
-    public List<Order> findAllByCustomerID(Long id) {
+    public List<Order> findAllByOfficeID(Long id) {
 
-        String query = "from Order as ord where ord.employee.office.customer.id = '" + id + "'";
+        String query = "from Order as ord where ord.employee.office.id = '" + id + "'";
+        List<Order> result = executeQuery(query, new String[]{}, new Object[]{});
+        return result;
+    }
+
+    public Object findAllByEmployeeID(Long id) {
+        String query = "from Order as ord where ord.employee.id = '" + id + "'";
         List<Order> result = executeQuery(query, new String[]{}, new Object[]{});
         return result;
     }
