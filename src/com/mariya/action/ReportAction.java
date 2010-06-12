@@ -3,6 +3,7 @@ package com.mariya.action;
 import com.mariya.dao.OrderDAO;
 import com.mariya.entity.CustomUser;
 import com.mariya.entity.Customer;
+import com.mariya.enums.OrderStatus;
 import com.mariya.report.EmployeeListReport;
 import com.mariya.report.OrderListReport;
 import com.mariya.utils.Constants;
@@ -64,7 +65,7 @@ public class ReportAction extends BaseAction {
                 String reportName = "OrderList.pdf";
                 uniqueReportName = FileUtil.uniqueFile(new File(reportDirectory), reportName);
                 OrderListReport employeeListReport = new OrderListReport(uniqueReportName);
-                employeeListReport.generate(customer.getOffice(), getOrderDAO().findAllByOfficeID(customer.getOffice().getId()));
+                employeeListReport.generate(customer.getOffice(), getOrderDAO().findAllByOfficeIdAndStatus(customer.getOffice().getId(), OrderStatus.InProgress));
             } catch (Exception e) {
                 e.printStackTrace();
             }

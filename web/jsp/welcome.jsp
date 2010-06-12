@@ -20,10 +20,10 @@
             </h1>
             <small>
                 Ціна продукту&nbsp;:&nbsp;<c:out value="${product.price}"/>&nbsp;грн.
-                &nbsp;-&nbsp;Доступна кількість&nbsp;:&nbsp;<c:out value="${product.count}"/>  
+                &nbsp;-&nbsp;Доступна кількість&nbsp;:&nbsp;<c:out value="${product.count}"/>
             </small>
             <div class="el_summary">
-                <p> 
+                <p>
                     <c:out value="${product.description}"/>
                 </p>
             </div>

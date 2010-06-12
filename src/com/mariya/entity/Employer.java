@@ -30,9 +30,6 @@ public class Employer {
     @JoinColumn(name = "office_id")
     private Office office;
 
-    @Basic
-    private String title;
-
     @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinColumn(name = "manager_id")
     private Employer manager;
@@ -68,14 +65,6 @@ public class Employer {
 
     public void setAge(Integer age) {
         this.age = age;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
     }
 
     public Employer getManager() {
@@ -173,14 +162,16 @@ public class Employer {
         this.phone = employer.getPhone();
         this.age = employer.getAge();
         this.office = employer.getOffice() ;
-        this.title = employer.getTitle();
         this.manager = employer.getManager();
         this.quota = employer.getQuota();
         this.sales = employer.getSales();
         this.active = employer.getActive();
+
+        this.getUser().setUsername(employer.getUser().getUsername());
+        this.getUser().setPassword(employer.getUser().getPassword());
     }
 
      public String getFullName(){
-        return firstName + " : " + lastName;
+        return firstName + " " + lastName;
     }
 }

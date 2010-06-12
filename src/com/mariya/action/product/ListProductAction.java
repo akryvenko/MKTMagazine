@@ -3,7 +3,6 @@ package com.mariya.action.product;
 import com.mariya.dao.ProductDAO;
 import com.mariya.entity.Product;
 import com.mariya.utils.Constants;
-import com.mariya.utils.Utils;
 import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
@@ -11,6 +10,7 @@ import org.apache.struts.action.ActionMapping;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ListProductAction extends Action {
@@ -25,11 +25,23 @@ public class ListProductAction extends Action {
 
     public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) {
 
-        List<Product> products = getProductDAO().findAll();
+
+        String active = (String) request.getParameter("activeFilter");
+
+        List<Product> products = new ArrayList();
+
+        if (active == null || active.equals("active")) {
+            products.addAll(getProductDAO().findAllByState(true));
+        } else if (active.equals("all")) {
+            products.addAll(getProductDAO().findAll());
+        } else if (active.equals("unactive")) {
+            products.addAll(getProductDAO().findAllByState(false));
+        }
+
         request.setAttribute(Constants.PRODUCT_LIST, products);
         return mapping.findForward("list");
 
-        }
-
-        private ProductDAO productDAO;
     }
+
+    private ProductDAO productDAO;
+}

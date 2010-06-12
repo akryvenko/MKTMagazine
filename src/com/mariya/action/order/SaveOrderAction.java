@@ -6,8 +6,8 @@ import com.mariya.dao.OrderDAO;
 import com.mariya.dao.ProductDAO;
 import com.mariya.entity.CustomUser;
 import com.mariya.entity.Customer;
-import com.mariya.entity.Employer;
 import com.mariya.entity.Order;
+import com.mariya.enums.OrderStatus;
 import com.mariya.utils.Constants;
 import com.mariya.utils.Utils;
 import org.acegisecurity.context.SecurityContextHolder;
@@ -39,12 +39,6 @@ public class SaveOrderAction extends Action {
             getOrderDAO().save(savedOrder);
         } else {
             getOrderDAO().save(order);
-        }
-
-        if (customer != null) {
-            request.setAttribute(Constants.CUSTOMER, customer);
-            List<Order> orders = getOrderDAO().findAllByOfficeID(customer.getOffice().getId());
-            request.setAttribute(Constants.ORDER_LIST, orders);
         }
 
         return mapping.findForward("list");

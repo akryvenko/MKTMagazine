@@ -49,5 +49,6 @@ public class Constants {
     public static final String REPORT_DIRECTORY = "/report";
 
     public static final String STATUS = "status";
+    public static final String PRODUCT_CATEGORY_LIST = "productCategories";
 }
 

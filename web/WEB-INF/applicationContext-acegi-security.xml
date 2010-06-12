@@ -67,7 +67,7 @@
    </bean>
 
    <bean id="logoutFilter" class="org.acegisecurity.ui.logout.LogoutFilter">
-      <constructor-arg value="/index.jsp"/> <!-- URL redirected to after logout -->
+      <constructor-arg value="/welcome.do"/> <!-- URL redirected to after logout -->
       <constructor-arg>
          <list>
               <ref bean="rememberMeServices"/>
@@ -92,7 +92,7 @@
    <bean id="authenticationProcessingFilter" class="org.acegisecurity.ui.webapp.AuthenticationProcessingFilter">
       <property name="authenticationManager"><ref bean="authenticationManager"/></property>
       <property name="authenticationFailureUrl"><value>/acegilogin.jsp?login_error=1</value></property>
-      <property name="defaultTargetUrl"><value>/</value></property>
+      <property name="defaultTargetUrl"><value>/welcome.do</value></property>
       <property name="filterProcessesUrl"><value>/j_acegi_security_check</value></property>
       <property name="rememberMeServices"><ref local="rememberMeServices"/></property>
    </bean>

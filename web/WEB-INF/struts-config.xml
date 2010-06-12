@@ -12,6 +12,8 @@
         <form-bean name="customerForm" type="com.mariya.form.CustomerForm"/>
         <form-bean name="registrationCustomerForm" type="com.mariya.form.RegistrationCustomerForm"/>
         <form-bean name="orderForm" type="com.mariya.form.OrderForm"/>
+        <form-bean name="productCategoryForm" type="com.mariya.form.ProductCategotyForm"/>
+        <form-bean name="periodReportForm" type="com.mariya.form.PeriodReportForm"/>
     </form-beans>
 
     <global-exceptions/>
@@ -60,7 +62,7 @@
                 input="/jsp/product/edit.jsp"
                 validate="true"
                 type="org.springframework.web.struts.DelegatingActionProxy">
-             <forward name="list" path="/jsp/product/list.jsp"/>
+            <forward name="list" path="/product/list.do"/>
         </action>
 
 
@@ -70,7 +72,7 @@
                 input="/jsp/product/create.jsp"
                 validate="true"
                 type="org.springframework.web.struts.DelegatingActionProxy">
-            <forward name="list" path="/jsp/product/list.jsp"/>
+            <forward name="list" path="/product/list.do"/>
         </action>
 
         <action path="/registerCustomer"
@@ -80,8 +82,7 @@
                 scope="request"
                 validate="true"
                 type="org.springframework.web.struts.DelegatingActionProxy">
-
-            <forward name="success" path="/welcome.do"/>
+            <forward name="success" path="/jsp/customer/account_created.jsp"/>
         </action>
 
         <action path="/customerSignup" type="org.springframework.web.struts.DelegatingActionProxy">
@@ -144,7 +145,7 @@
                 type="org.springframework.web.struts.DelegatingActionProxy">
             <forward name="edit" path="/jsp/office/edit.jsp"/>
         </action>
-        
+
         <action path="/customer/office/save"
                 attribute="officeForm"
                 name="officeForm"
@@ -182,7 +183,7 @@
                 validate="true"
                 input="/jsp/order/create.jsp"
                 type="org.springframework.web.struts.DelegatingActionProxy">
-            <forward name="list" path="/jsp/order/customer_list.jsp"/>
+            <forward name="list" path="/customer/order/list.do"/>
         </action>
 
         <action path="/customer/order/edit"
@@ -200,7 +201,7 @@
                 validate="true"
                 input="/jsp/order/edit.jsp"
                 type="org.springframework.web.struts.DelegatingActionProxy">
-            <forward name="list" path="/jsp/order/customer_list.jsp"/>
+            <forward name="list" path="/customer/order/list.do"/>
         </action>
 
         <!--Customer actions-->
@@ -234,9 +235,64 @@
             <forward name="manager_welcome" path="/jsp/order/employee_list.jsp"/>
         </action>
 
+        <!--Product Category Actions-->
+
+        <action path="/product/category/list" type="org.springframework.web.struts.DelegatingActionProxy">
+            <forward name="list" path="/jsp/product/category/list.jsp"/>
+        </action>
+
+        <action path="/product/category/new"
+                type="org.springframework.web.struts.DelegatingActionProxy"
+                name="productCategoryForm"
+                scope="request"
+                validate="false"
+                input="/jsp/product/category/create.jsp">
+            <forward name="create" path="/jsp/product/category/create.jsp"/>
+        </action>
+
+        <action path="/product/category/save"
+                type="org.springframework.web.struts.DelegatingActionProxy"
+                name="productCategoryForm"
+                validate="true"
+                scope="request"
+                input="/jsp/product/category/create.jsp">
+            <forward name="list" path="/product/category/list.do"/>
+        </action>
+
+        <action path="/product/category/edit"
+                type="org.springframework.web.struts.DelegatingActionProxy"
+                name="productCategoryForm"
+                scope="request"
+                validate="false"
+                input="/jsp/product/category/edit.jsp">
+            <forward name="edit" path="/jsp/product/category/edit.jsp"/>
+        </action>
+
+        <!--Reports Actions-->
+
         <action path="/customer/report" type="org.springframework.web.struts.DelegatingActionProxy">
         </action>
 
+        <action path="/customer/report/order/period"
+                type="org.springframework.web.struts.DelegatingActionProxy"
+                name="periodReportForm"
+                validate="false"
+                scope="request"
+                input="/jsp/customer/period_report.jsp">
+            <forward name="report" path="/jsp/customer/period_report.jsp"/>
+        </action>
+
+        <action path="/customer/ReportForPeriod"
+            type="org.springframework.web.struts.DelegatingActionProxy"
+                name="periodReportForm"
+                validate="true"
+                scope="request"
+                input="/jsp/customer/period_report.jsp">
+            <forward name="download" path="/customer/CustomerReport.pdf" redirect="true" />
+        </action>
+
+        <action path="/customer/CustomerReport"            
+            type="org.springframework.web.struts.DelegatingActionProxy" />
 
     </action-mappings>
 

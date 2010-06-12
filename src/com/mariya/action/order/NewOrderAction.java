@@ -1,8 +1,6 @@
 package com.mariya.action.order;
 
-import com.mariya.dao.CustomerDAO;
 import com.mariya.dao.EmployerDAO;
-import com.mariya.dao.OrderDAO;
 import com.mariya.dao.ProductDAO;
 import com.mariya.entity.*;
 import com.mariya.form.OrderForm;
@@ -29,7 +27,7 @@ public class NewOrderAction extends Action {
             customer = (Customer) userInfo;
         }
 
-        List<Employer> employers = getEmployerDAO().findAllByOfficeID(customer.getOffice().getId());
+        List<Employer> employers = getEmployerDAO().findAllByOfficeID(customer.getOffice().getId(), true);
         request.getSession().setAttribute(Constants.EMPLOYER_LIST, employers);
 
         Long productId = Utils.getLongParameter(request, Constants.PRODUCT_ID);

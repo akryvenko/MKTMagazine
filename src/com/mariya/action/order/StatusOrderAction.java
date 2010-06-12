@@ -1,9 +1,6 @@
 package com.mariya.action.order;
 
-import com.mariya.dao.CustomerDAO;
-import com.mariya.dao.EmployerDAO;
 import com.mariya.dao.OrderDAO;
-import com.mariya.dao.ProductDAO;
 import com.mariya.entity.CustomUser;
 import com.mariya.entity.Employer;
 import com.mariya.entity.Order;
@@ -11,7 +8,6 @@ import com.mariya.enums.OrderStatus;
 import com.mariya.utils.Constants;
 import com.mariya.utils.Utils;
 import org.acegisecurity.context.SecurityContextHolder;
-import org.acegisecurity.userdetails.UserDetails;
 import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
@@ -42,7 +38,7 @@ public class StatusOrderAction extends Action {
 
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         Employer employer = (Employer) ((CustomUser) principal).getUserInfo();
-        request.setAttribute(Constants.ORDER_LIST, orderDAO.findAllByEmployeeID(employer.getId()));
+        request.setAttribute(Constants.ORDER_LIST, orderDAO.findAllByEmployeeID(employer.getId(), OrderStatus.InProgress));
 
         return mapping.findForward("employee_list");
     }

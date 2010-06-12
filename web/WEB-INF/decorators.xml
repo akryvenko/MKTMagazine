@@ -5,7 +5,15 @@
     </excludes>
 
     <decorator name="main" page="main.jsp">
-        <pattern>*</pattern>
+        <pattern>/acegilogin.jsp</pattern>
+        <pattern>/jsp/**</pattern>
+        <pattern>/product/**</pattern>
+        <pattern>/customer/**</pattern>
+        <pattern>/customerSignup.do</pattern>
+    </decorator>
+
+    <decorator name="productList" page="product_list.jsp">
+        <pattern>/welcome.do</pattern>
     </decorator>
 
 </decorators>

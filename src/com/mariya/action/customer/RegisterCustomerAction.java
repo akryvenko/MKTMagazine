@@ -60,6 +60,7 @@ public class RegisterCustomerAction extends BaseAction {
         employee.setLastName(registrationCustomerForm.getLastName());
         employee.setMail(registrationCustomerForm.getCustomerEmail());
         employee.setPhone(registrationCustomerForm.getCustomerPhone());
+        employee.setActive(1);
         employee.setOffice(office);
 
         employerDAO.save(employee);

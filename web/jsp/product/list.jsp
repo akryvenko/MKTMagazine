@@ -11,13 +11,24 @@
 </div>
 <div class="body">
     <h1>Список продуктів</h1>
+    <form action="<c:url value="/product/list.do"/>">
+        <select id="activeFilter" name="activeFilter">
+            <option value="active">Всі активні</option>
+            <option value="unactive">Всі не активні</option>
+            <option value="all">Всі продукти</option>
 
+        </select>
+        <span class="button">
+            <input type="submit" value="Фільтрувати"/>
+         </span>
+    </form>
     <div class="list">
         <table>
             <thead>
             <tr>
                 <th>Назва Продукту</th>
                 <th>Ціна Продукту</th>
+                <th>Категорія</th>
                 <th>На складі</th>
                 <th>Дія</th>
             </tr>
@@ -29,6 +40,9 @@
                     </td>
                     <td>
                         <c:out value="${product.price}"/>
+                    </td>
+                    <td>
+                        <c:out value="${product.productCategory.name}"/>
                     </td>
                     <td>
                         <c:out value="${product.count}"/>

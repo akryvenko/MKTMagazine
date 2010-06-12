@@ -1,7 +1,6 @@
 package com.mariya.action.office;
 
 import com.mariya.dao.EmployerDAO;
-import com.mariya.dao.OfficeDAO;
 import com.mariya.entity.CustomUser;
 import com.mariya.entity.Customer;
 import com.mariya.entity.Employer;
@@ -27,7 +26,7 @@ public class NewOfficeAction extends Action {
             customer = (Customer) userInfo;
         }
 
-        List<Employer> employers = getEmployerDAO().findAllByOfficeID(customer.getOffice().getId());
+        List<Employer> employers = getEmployerDAO().findAllByOfficeID(customer.getOffice().getId(), true);
         request.getSession().setAttribute(Constants.EMPLOYER_LIST, employers);
 
         return mapping.findForward("create");

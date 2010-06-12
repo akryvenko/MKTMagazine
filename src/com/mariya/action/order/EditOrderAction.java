@@ -16,7 +16,6 @@ import org.apache.struts.action.ActionMapping;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.List;
 
@@ -35,7 +34,7 @@ public class EditOrderAction extends Action {
         Long orderId = Utils.getLongParameter(request, Constants.ORDER_ID);
         Order order = getOrderDAO().findById(orderId);
 
-        List<Employer> employers = getEmployerDAO().findAllByOfficeID(customer.getOffice().getId());
+        List<Employer> employers = getEmployerDAO().findAllByOfficeID(customer.getOffice().getId(), true);
         request.getSession().setAttribute(Constants.EMPLOYER_LIST, employers);
 
         Product product = order.getProduct();

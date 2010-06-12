@@ -38,7 +38,7 @@
                 <value>com.mariya.entity.Employer</value>
                 <value>com.mariya.entity.Order</value>
                 <value>com.mariya.entity.Product</value>
-
+                <value>com.mariya.entity.ProductCategory</value>
             </list>
         </property>
     </bean>
@@ -68,6 +68,10 @@
     </bean>
 
     <bean name="userDAO" class="com.mariya.dao.UserDAO">
+        <property name="sessionFactory" ref="theSessionFactory"/>
+    </bean>
+    
+    <bean name="productCategotyDAO" class="com.mariya.dao.ProductCategotyDAO">
         <property name="sessionFactory" ref="theSessionFactory"/>
     </bean>
 

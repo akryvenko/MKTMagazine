@@ -1,7 +1,9 @@
 package com.mariya.dao;
 
+import com.mariya.entity.Order;
 import com.mariya.entity.Product;
 
+import java.util.Collection;
 import java.util.List;
 
 public class ProductDAO extends BaseDAO {
@@ -30,5 +32,17 @@ public class ProductDAO extends BaseDAO {
 
     public void deleteById(Long productId){
         deleteEntityById(Product.class, productId);
+    }
+
+    public List<Product> findAllByState(boolean active) {
+        String query = "from Product as prod where prod.active = '" + (active ? 1 : 0) + "'";
+        List<Product> result = executeQuery(query, new String[]{}, new Object[]{});
+        return result;
+    }
+
+    public Collection<? extends Product> findAllActiveAndCategoryId(Long categoryId) {
+        String query = "from Product as prod where prod.active = '1' AND prod.productCategory.id = '" + categoryId + "'";
+        List<Product> result = executeQuery(query, new String[]{}, new Object[]{});
+        return result;
     }
 }

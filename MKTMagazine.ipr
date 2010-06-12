@@ -21,6 +21,12 @@
         <element id="javaee-facet-resources" facet="MKTMagazine/web/Web" />
       </root>
     </artifact>
+    <artifact type="war" name="MKTMagazine:war">
+      <output-path>$PROJECT_DIR$/out/artifacts/MKTMagazine_war</output-path>
+      <root id="archive" name="MKTMagazine_war.war">
+        <element id="artifact" artifact-name="MKTMagazine:war exploded" />
+      </root>
+    </artifact>
   </component>
   <component name="BuildJarProjectSettings">
     <option name="BUILD_JARS_ON_MAKE" value="false" />
@@ -367,6 +373,7 @@
         <root url="jar://$PROJECT_DIR$/lib/struts-taglib-1.3.8.jar!/" />
         <root url="jar://$PROJECT_DIR$/lib/log4j-1.2.13.jar!/" />
         <root url="jar://$PROJECT_DIR$/lib/iText-5.0.2.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/mysql-connector-java-5.0.4-bin.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES>

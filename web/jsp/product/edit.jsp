@@ -2,6 +2,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://struts.apache.org/tags-html" prefix="html" %>
 
+<jsp:useBean id="productCategories" scope="session" type="java.util.Collection"/>
+
 <html:html>
 <head>
     <title>Редагування продукту</title>
@@ -28,10 +30,15 @@
                 <td valign="top" class="name">Кількість</td>
                 <td valign="top" class="value"><html:text property="count"/></td>
             </tr>
-            <tr class="prop">
-                <td valign="top" class="name">Активний</td>
-                <td valign="top" class="value"><html:checkbox property="active"/></td>
-            </tr>
+              <tr class="prop">
+                    <td valign="top" class="name">Категорія</td>
+                    <td valign="top" class="value">
+                        <html:select property="category">
+                            <html:option value="">Виберiть Категорію</html:option>
+                            <html:options collection="productCategories" property="id" labelProperty="name"/>
+                        </html:select>
+                    </td>
+                </tr>
             <tr class="prop">
                 <td valign="top" class="name">Опис продукту</td>
                 <td valign="top" class="value"><html:textarea property="description"  rows="3" cols="10"/></td>

@@ -48,10 +48,6 @@
                     <td valign="top" class="value"><html:text property="password"/></td>
                 </tr>
                 <tr class="prop">
-                    <td valign="top" class="name">Заголовок:</td>
-                    <td valign="top" class="value"><html:text property="title"/></td>
-                </tr>
-                <tr class="prop">
                     <td valign="top" class="name">Менежер:</td>
                     <td valign="top" class="value">
                         <html:select property="manager">

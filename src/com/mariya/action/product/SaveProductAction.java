@@ -1,6 +1,7 @@
 package com.mariya.action.product;
 
 import com.mariya.action.BaseAction;
+import com.mariya.dao.ProductCategotyDAO;
 import com.mariya.dao.ProductDAO;
 import com.mariya.entity.Product;
 import com.mariya.form.ProductForm;
@@ -22,7 +23,15 @@ import java.util.List;
 public class SaveProductAction extends BaseAction {
 
     private ProductDAO productDAO;
+    private ProductCategotyDAO productCategotyDAO;
 
+    public ProductCategotyDAO getProductCategotyDAO() {
+        return productCategotyDAO;
+    }
+
+    public void setProductCategotyDAO(ProductCategotyDAO productCategotyDAO) {
+        this.productCategotyDAO = productCategotyDAO;
+    }
 
     @Override
     protected ActionForward doExecute(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) {
@@ -30,6 +39,8 @@ public class SaveProductAction extends BaseAction {
         Product product = Utils.getProduct(form);
 
         ProductForm productForm = (ProductForm) form;
+
+        product.setProductCategory(getProductCategotyDAO().findByID(new Long(productForm.getCategory())));
 
         FormFile uploadedFile = productForm.getProductImage();
 
@@ -61,8 +72,6 @@ public class SaveProductAction extends BaseAction {
             getProductDAO().save(product);
         }
 
-        List<Product> products = getProductDAO().findAll();
-        request.setAttribute(Constants.PRODUCT_LIST, products);
         return mapping.findForward("list");
     }
 

@@ -15,7 +15,6 @@ public class EmployerForm  extends ValidatorForm implements Serializable {
     private String mail;
     private Integer age;
     private Long office;
-    private String title;
     private Long manager;
     private Float quota;
     private Float sales;
@@ -45,14 +44,6 @@ public class EmployerForm  extends ValidatorForm implements Serializable {
 
     public void setOffice(Long office) {
         this.office = office;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
     }
 
     public Long getManager() {
@@ -145,7 +136,6 @@ public class EmployerForm  extends ValidatorForm implements Serializable {
         mail = "" ;
         age = null ;
         office = null;
-        title = "";
         manager = null;
         quota = null;
         sales = null;

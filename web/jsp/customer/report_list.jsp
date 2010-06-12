@@ -12,6 +12,7 @@
     <h1>Звіти по Замовленням</h1>
     <div class="buttonBar">
         <span class="menuButton"><a class="report" href="<c:url value="/customer/report.pdf"><c:param name="report" value="orderList"/></c:url>">Список Замовлень</a></span>
+        <span class="menuButton"><a class="report" href="<c:url value="/customer/report/order/period.do"/>">За Період</a></span>
     </div>
     <%--<h1>Звіти по Продуктам</h1>--%>
     <%--<div class="buttonBar">--%>

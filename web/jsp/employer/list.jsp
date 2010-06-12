@@ -1,5 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://struts.apache.org/tags-html" prefix="html" %>
 
 <jsp:useBean id="employers" scope="request" type="java.util.Collection"/>
 
@@ -10,16 +11,26 @@
     <span class="menuButton"><a class="create" href="<c:url value="/customer/employee/new.do"/>">Новий
         працiвник</a></span>
 </div>
+
 <div class="body">
     <h1>Список Працiвникiв</h1>
 
+    <form action="<c:url value="/customer/employee/list.do"/>">
+        <select id="active" name="active">
+            <option value="active">Всі активні</option>
+            <option value="unactive">Всі не активні</option>
+            <option value="all">Всі працівники</option>
+        </select>
+               <span class="button">
+                       <input type="submit" value="Фільтрувати"/>
+               </span>
+    </form>
     <div class="list">
         <table>
             <thead>
             <tr>
                 <th>ПIБ</th>
                 <th>Вік</th>
-                <th>Заголовок</th>
                 <th>Менеджер</th>
                 <th>Квота</th>
                 <th>Салес</th>
@@ -33,9 +44,6 @@
                     </td>
                     <td>
                         <c:out value="${viewBeanl.age}"/>
-                    </td>
-                    <td>
-                        <c:out value="${viewBeanl.title}"/>
                     </td>
                     <td>
                         <c:out value="${viewBeanl.manager.firstName}"/>&nbsp;<c:out

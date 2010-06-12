@@ -89,7 +89,6 @@ public class Utils {
         employer.setPhone(employerForm.getPhone());
         employer.setAge(employerForm.getAge());
         employer.setManager(employerForm.getManager() > 0 ? employerDAO.findById(employerForm.getManager()) : null);
-        employer.setTitle(employerForm.getTitle());
         employer.setOffice(employerForm.getOffice() > 0 ? officeDAO.findById(employerForm.getOffice()) : null);
         employer.setQuota(new BigDecimal(employerForm.getQuota()));
         employer.setSales(new BigDecimal(employerForm.getSales()));

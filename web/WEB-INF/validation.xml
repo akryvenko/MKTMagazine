@@ -114,5 +114,16 @@
                 <arg position="0" key="order.form.productCount"/>
             </field>
         </form>
+        <form name="periodReportForm">
+            <field property="employee" depends="required">
+                <arg position="0" key="order.form.manager"/>
+            </field>
+            <field property="startDate" depends="required">
+                <arg position="0" key="perid.report.form.startDate"/>
+            </field>
+            <field property="endDate" depends="required">
+                <arg position="0" key="perid.report.form.endDate"/>
+            </field>
+        </form>
     </formset>
 </form-validation>

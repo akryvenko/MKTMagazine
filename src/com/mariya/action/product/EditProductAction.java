@@ -1,5 +1,6 @@
 package com.mariya.action.product;
 
+import com.mariya.dao.ProductCategotyDAO;
 import com.mariya.dao.ProductDAO;
 import com.mariya.entity.Product;
 import com.mariya.form.ProductForm;
@@ -18,6 +19,7 @@ import javax.servlet.http.HttpServletResponse;
 public class EditProductAction extends Action {
 
     private ProductDAO productDAO;
+    private ProductCategotyDAO productCategotyDAO;
 
     public ProductDAO getProductDAO() {
         return productDAO;
@@ -25,6 +27,14 @@ public class EditProductAction extends Action {
 
     public void setProductDAO(ProductDAO productDAO) {
         this.productDAO = productDAO;
+    }
+
+    public ProductCategotyDAO getProductCategotyDAO() {
+        return productCategotyDAO;
+    }
+
+    public void setProductCategotyDAO(ProductCategotyDAO productCategotyDAO) {
+        this.productCategotyDAO = productCategotyDAO;
     }
 
     public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) {
@@ -39,8 +49,12 @@ public class EditProductAction extends Action {
         Integer count = product.getCount();
         productForm.setCount(count == null ? 0 : count);
         productForm.setActive(product.getActive() == 1);
+        productForm.setDescription(product.getDescription());
+        productForm.setCategory(product.getProductCategory() == null ? "" : product.getProductCategory().getId().toString());
 //        productForm.setProductImage(new FormFile());
         
+        request.getSession().setAttribute(Constants.PRODUCT_CATEGORY_LIST, productCategotyDAO.findAllActive());
+
         return mapping.findForward("edit");
     }
 

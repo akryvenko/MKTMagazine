@@ -33,6 +33,10 @@ public class Product {
     @Basic
     private int active;
 
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @JoinColumn(name = "category_id")
+    private ProductCategory productCategory;
+
     public Long getId() {
         return id;
     }
@@ -98,6 +102,14 @@ public class Product {
         this.active = active;
     }
 
+    public ProductCategory getProductCategory() {
+        return productCategory;
+    }
+
+    public void setProductCategory(ProductCategory productCategory) {
+        this.productCategory = productCategory;
+    }
+
     public void populate(Product product) {
         name = product.getName();
         description = product.getDescription();
@@ -107,5 +119,6 @@ public class Product {
             imagePath = product.getImagePath();
         }
         active = product.getActive();
+        this.productCategory = product.getProductCategory();
     }
 }

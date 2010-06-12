@@ -5,10 +5,8 @@ import com.mariya.dao.OfficeDAO;
 import com.mariya.entity.CustomUser;
 import com.mariya.entity.Customer;
 import com.mariya.entity.Employer;
-import com.mariya.entity.Office;
 import com.mariya.form.EmployerForm;
 import com.mariya.utils.Constants;
-import com.mariya.utils.Utils;
 import org.acegisecurity.context.SecurityContextHolder;
 import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionForm;
@@ -33,7 +31,7 @@ public class NewEmployeeAction extends Action {
         EmployerForm employerForm = (EmployerForm) form;
         employerForm.setOffice(customer.getOffice().getId());
 
-        List<Employer> employers = getEmployerDAO().findAllByOfficeID(customer.getOffice().getId());
+        List<Employer> employers = getEmployerDAO().findAllByOfficeID(customer.getOffice().getId(), true);
         request.getSession().setAttribute(Constants.EMPLOYER_LIST, employers);
 
         return mapping.findForward("success");

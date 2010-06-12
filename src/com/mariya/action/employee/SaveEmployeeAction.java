@@ -40,7 +40,7 @@ public class SaveEmployeeAction extends Action {
             getEmployerDAO().save(employer);
         }
 
-        List<Employer> products = getEmployerDAO().findAllByOfficeID(customer.getOffice().getId());
+        List<Employer> products = getEmployerDAO().findAllByOfficeID(customer.getOffice().getId(), true);
         request.setAttribute(Constants.EMPLOYER_LIST, products);
 
         return mapping.findForward("list");

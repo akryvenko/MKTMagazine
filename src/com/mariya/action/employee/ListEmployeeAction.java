@@ -14,6 +14,7 @@ import org.apache.struts.action.ActionMapping;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ListEmployeeAction extends Action {
@@ -27,7 +28,19 @@ public class ListEmployeeAction extends Action {
             customer = (Customer) userInfo;
         }
 
-        List<Employer> employers = getEmployerDAO().findAllByOfficeID(customer.getOffice().getId());
+        String active = (String) request.getParameter("active");
+
+        List<Employer> employers = new ArrayList();
+
+        if (active == null || active.equals("active")) {
+            employers.addAll(getEmployerDAO().findAllByOfficeID(customer.getOffice().getId(), true));
+        } else if (active.equals("all")) {
+            employers.addAll(getEmployerDAO().findAllByOfficeID(customer.getOffice().getId(), true));
+            employers.addAll(getEmployerDAO().findAllByOfficeID(customer.getOffice().getId(), false));
+        } else if (active.equals("unactive")) {
+            employers.addAll(getEmployerDAO().findAllByOfficeID(customer.getOffice().getId(), false));
+        }
+        
         request.setAttribute(Constants.EMPLOYER_LIST, employers);
 
         return mapping.findForward("list");

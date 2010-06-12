@@ -19,6 +19,7 @@ public class ProductForm extends ValidatorForm implements Serializable {
     private int count;
     private FormFile productImage;
     private Boolean active;
+    private String category;
 
     @Override
     public ActionErrors validate(ActionMapping mapping, HttpServletRequest request) {
@@ -83,6 +84,14 @@ public class ProductForm extends ValidatorForm implements Serializable {
         this.active = active;
     }
 
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
     @Override
     public void reset(ActionMapping mapping, HttpServletRequest request) {
         super.reset(mapping, request);
@@ -92,5 +101,6 @@ public class ProductForm extends ValidatorForm implements Serializable {
         count = 0;
         cost = null;
         active = true;
+        category = "";
     }
 }

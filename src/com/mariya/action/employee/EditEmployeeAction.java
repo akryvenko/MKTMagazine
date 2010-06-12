@@ -5,7 +5,6 @@ import com.mariya.dao.OfficeDAO;
 import com.mariya.entity.CustomUser;
 import com.mariya.entity.Customer;
 import com.mariya.entity.Employer;
-import com.mariya.entity.Office;
 import com.mariya.form.EmployerForm;
 import com.mariya.utils.Constants;
 import com.mariya.utils.Utils;
@@ -47,13 +46,12 @@ public class EditEmployeeAction extends Action {
         }
 
         employerForm.setOffice(employee.getOffice().getId());
-        employerForm.setTitle(employee.getTitle());
         employerForm.setManager(employee.getManager() != null ? employee.getManager().getId() : null);
         employerForm.setQuota(employee.getQuota() == null ? 0 : employee.getQuota().floatValue());
         employerForm.setSales(employee.getSales() == null ? 0 : employee.getSales().floatValue());
         employerForm.setActive(employee.getActive() == 1);
 
-        List<Employer> employers = getEmployerDAO().findAllByOfficeID(customer.getOffice().getId());
+        List<Employer> employers = getEmployerDAO().findAllByOfficeID(customer.getOffice().getId(), true);
         request.getSession().setAttribute(Constants.EMPLOYER_LIST, employers);
 
 

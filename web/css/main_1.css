@@ -1,0 +1,745 @@
+html, body{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 12px;
+	color: #32302c;
+	font-family: Helvetica, Arial, sans-serif;
+	height: 100%;
+}
+body {
+	background-color: #cfcdbf;
+}
+:focus {
+	outline: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #32302c;
+}
+a:hover {
+	color: #000000;
+}
+ol, ul, ul li {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin: 0px;
+	padding: 0px;
+}
+img, img a {
+	border: none;
+}
+
+#wrapper{
+    background: #e4e2da url(/MKT/images/background_body.jpg) top center repeat-x;
+	padding-bottom: 20px;
+}
+
+#container{
+    position: relative;
+	width: 960px;
+	margin: 0px auto;
+}
+
+#header{
+    position: relative;
+	height: 272px;
+	width: 960px;
+	overflow: hidden;
+	/*background: transparent url(images/background_header.jpg) top center no-repeat;*/
+	margin-bottom: 10px;
+}
+
+h2.content_title {
+	padding: 5px 10px;
+	background-color: #e6e5dd;
+	color: #751e1b;
+	border: 1px solid #c8c6ba;
+	text-align: right;
+	font-size: 18px;
+	font-weight: normal;
+}
+
+h2.filter_title {
+	color: #751e1b;
+	text-align: left;
+	font-size: 18px;
+	font-weight: normal;
+}
+
+#loginform {
+	position: absolute;
+	width: 250px;
+    height: 20px;
+	top: 3px;
+	left: 500px;
+    font-size: 12px;
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	color: #c4c4c4;
+}
+
+#loginform input {
+	color: #ffffff;
+	background-color: transparent;
+	border: 1px solid #c8c6ba;
+	padding: 2px 0px 2px 5px;
+	width: 80px;
+    margin-left: 3px;
+}
+
+#loginform label {
+    color: #c4c4c4;
+	text-decoration: none;
+}
+
+#loginform a {
+	color: #c4c4c4;
+	text-decoration: none;
+}
+
+#loginform a:hover {
+	color: #ffffff;
+}
+
+#form {
+    position:relative;
+}
+
+#item {
+    padding:10px;
+    position:relative;
+}
+
+#item label {
+    display:block;
+    float:left;
+    font-size:1.2em;
+    width:100px;
+}
+
+#navigation {
+	position: absolute;
+	width: 770px;
+	height: 19px;
+	top: 125px;
+	padding-left: 190px;
+	padding-top: 7px;
+	margin: 0px;
+}
+ul.nav li{
+	display: inline;
+	margin-right: 15px;
+}
+
+#content{
+	float: left;
+	width: 648px;
+	min-height: 500px;
+	background-color: #ffffff;
+	padding: 10px;
+	border: 1px solid #c8c6ba;
+}
+
+#leftBar {
+	float: left;
+	width: 100px;
+	background-color: #ffffff;
+	border: 1px solid #c8c6ba;
+	padding: 10px 10px 0px;
+}
+
+#leftBar ul {
+	margin-bottom: 10px;
+}
+
+
+#messagebar {
+	float: left;
+	width: 125px;
+	background-color: #ffffff;
+	border: 1px solid #c8c6ba;
+	padding: 10px 10px 0px;
+}
+
+#messagebar ul {
+	margin-bottom: 10px;
+}
+
+
+.message_top {
+	color: #751e1b;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 5px 0px 5px 10px;
+}
+
+.message_top a {
+	color: #751e1b;
+}
+
+.message_bottom {
+	background-color: #eeede5;
+	border: 1px solid #c8c6ba;
+	color: #5c5346;
+	padding: 2px 10px;
+}
+
+#footer{
+    text-align: center;
+    font-size: 10px;
+	color: #666666;
+	padding: 10px 0px;
+	min-height: 50px;
+	background-color: #cfcdbf;
+	border-top: #c4c2b5;
+}
+
+/* MESSAGES AND ERRORS */
+
+.message {
+    background: #f3f8fc url(/MKT/images/information.png) 8px 50% no-repeat;
+    border: 1px solid #b2d1ff;
+    color: #006dba;
+    margin: 10px 0 5px 0;
+    padding: 5px 5px 5px 30px
+}
+
+div.errors {
+    background: #fff3f3;
+    border: 1px solid red;
+    color: #cc0000;
+    margin: 10px 0 5px 0;
+    padding: 5px 0 5px 0;
+}
+div.errors ul {
+    list-style: none;
+    padding: 0;
+}
+div.errors li {
+	background: url(/MKT/images/skin/exclamation.png) 8px 0% no-repeat;
+    line-height: 16px;
+    padding-left: 30px;
+}
+
+div.fieldWithErrors input{
+    border: 1px solid red;
+}
+
+td.errors select {
+    border: 1px solid red;
+}
+
+td.errors input {
+    border: 1px solid red;
+}
+
+label.required:after {
+    color: #c00;
+    padding: 2px;
+    content: "*";
+}
+
+a.dp-choose-date {
+	width: 16px;
+	height: 16px;
+	padding: 0;
+	margin: 0px 3px 0;
+	display: inline-block;
+	text-indent: -2000px;
+	overflow: hidden;
+	background: url(/MKT/images/calendar.png) no-repeat;
+}
+a.dp-choose-date.dp-disabled {
+	background-position: 0 -20px;
+	cursor: default;
+}
+
+#calendar-me {
+	margin: 20px;
+}
+
+/* HOMEPAGE STYLES */
+.el_preview {
+    border-bottom: 1px solid #c8c6ba;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.el_preview img, .article_preview a img {
+    float: left;
+    width: 125px;
+    height: 125px;
+    margin-right: 20px;
+    border: 1px solid #c8c6ba;
+}
+
+.el_title {
+    margin: 5px 0px;
+}
+.el_title, .el_title a {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-weight: normal;
+    font-size: 18px;
+    color: #751e1b;
+    text-transform: uppercase;
+}
+
+small {
+    font-size: 11px;
+    color: #686765;
+    text-transform: uppercase;
+    padding: 0px !important;
+}
+small a {
+    font-size: 11px;
+}
+.el_summary {
+    padding-top: 10px;
+}
+
+div.button_bar {
+	padding: 5px 5px;
+	background-color: #e6e5dd;
+	border: 1px solid #c8c6ba;
+	text-align: right;
+	font-weight: normal;
+	margin-bottom: 10px;
+}
+
+div.filter_bar {
+	padding: 5px 5px;
+	background-color: #e6e5dd;
+	border: 1px solid #c8c6ba;
+	text-align: left;
+	font-weight: normal;
+	margin-bottom: 10px;
+}
+
+.menuButton {
+    padding: 0 5px;
+}
+
+.menuButton input {
+    font-size: 12px;
+    border: 0;
+    cursor: pointer;
+    color:#751E1B;
+    font-weight: bold;
+    margin-left: 3px;
+    overflow: visible;
+    padding: 3px 14px;
+    border: 1px solid #757474;
+    background: transparent 5px 50% no-repeat;
+}
+
+.menuButton a {
+    font-size: 12px;
+    border: 0;
+    cursor: pointer;
+    color:#751E1B;
+    font-weight: bold;
+    margin-left: 3px;
+    overflow: visible;
+    padding: 3px 14px;
+    border: 1px solid #757474;
+}
+
+.el_preview {
+    border-bottom: 1px solid #c8c6ba;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.el_preview img, .article_preview a img {
+    float: left;
+    width: 125px;
+    height: 125px;
+    margin-right: 20px;
+    border: 1px solid #c8c6ba;
+}
+
+span.open {
+    font-size: 12px;
+    color: #17e47f;
+}
+
+span.close {
+    font-size: 12px;
+    color: #ff0000;
+}
+
+span.assigned {
+    font-size: 12px;
+    color: #cccc00;
+}
+
+/* COMMENTS STYLES */
+#comments_list {
+	margin-bottom: 20px;
+}
+#comments_list h3 {
+	margin-bottom: 10px;
+	color: #751e1b;
+}
+#respond h3 {
+	margin: 0px 10px;
+	color: #751e1b;
+}
+.comments_holder {
+	margin-bottom: 10px;
+}
+.comments_top {
+	color: #751e1b;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 5px 0px 5px 10px;
+}
+.comments_top a {
+	color: #751e1b;
+}
+.comments_top span.said {
+    text-transform: none;
+	color: #c8c6ba;
+}
+.comments_bottom {
+	background-color: #eeede5;
+	border: 1px solid #c8c6ba;
+	color: #5c5346;
+	padding: 0px 10px;
+}
+.formcontainer {
+	padding: 0px 10px;
+}
+.herocomment .comments_bottom {
+	background: #eeede5 url(/MKT/images/hero_comment.jpg) top left no-repeat scroll;
+	padding-left: 55px;
+}
+
+/* GENERAL */
+
+.spinner {
+    padding: 5px;
+    position: absolute;
+    right: 0;
+}
+
+h1 {
+    color: #006dba;
+    font-weight: normal;
+    font-size: 16px;
+    margin: .8em 0 .3em 0;
+}
+
+input, select, textarea {
+    background-color: #fcfcfc;
+    border: 1px solid #ccc;
+    font: 11px verdana, arial, helvetica, sans-serif;
+    margin: 2px 0;
+    padding: 2px 4px;
+}
+select {
+   padding: 2px 2px 2px 0;
+}
+textarea {
+	width: 250px;
+	height: 150px;
+	vertical-align: top;
+}
+
+input:focus, select:focus, textarea:focus {
+    border: 1px solid #b2d1ff;
+}
+
+/* NAVIGATION MENU */
+
+.buttonBar {
+    background: #fff url(/MKT/images/skin/shadow.jpg) bottom repeat-x;
+    border: 1px solid #ccc;
+    border-style: solid none solid none;
+    margin-top: 5px;
+    padding: 7px 12px;
+}
+
+.menuButton {
+    font-size: 10px;
+    padding: 0 5px;
+}
+.menuButton a {
+    color: #333;
+    padding: 4px 6px;
+}
+.menuButton a.home {
+    background: url(/MKT/images/skin/house.png) center left no-repeat;
+    color: #333;
+    padding-left: 25px;
+}
+.menuButton a.list {
+    background: url(/MKT/images/skin/database_table.png) center left no-repeat;
+    color: #333;
+    padding-left: 25px;
+}
+.menuButton a.create {
+    background: url(/MKT/images/skin/database_add.png) center left no-repeat;
+    color: #333;
+    padding-left: 25px;
+}
+
+.menuButton a.edit {
+    background: url(/MKT/images/skin/database_add.png) center left no-repeat;
+    color: #333;
+    padding-left: 25px;
+}
+
+.menuButton a.delete {
+    background: url(/MKT/images/skin/database_add.png) center left no-repeat;
+    color: #333;
+    padding-left: 25px;
+}
+
+.menuButton a.cancel {
+    background: url(/MKT/images/skin/database_add.png) center left no-repeat;
+    color: #333;
+    padding-left: 25px;
+}
+
+/* MESSAGES AND ERRORS */
+
+.message {
+    background: #f3f8fc url(/MKT/images/skin/information.png) 8px 50% no-repeat;
+    border: 1px solid #b2d1ff;
+    color: #006dba;
+    margin: 10px 0 5px 0;
+    padding: 5px 5px 5px 30px
+}
+
+div.errors {
+    background: #fff3f3;
+    border: 1px solid red;
+    color: #cc0000;
+    margin: 10px 0 5px 0;
+    padding: 5px 0 5px 0;
+}
+div.errors ul {
+    list-style: none;
+    padding: 0;
+}
+div.errors li {
+	background: url(/MKT/images/skin/exclamation.png) 8px 0% no-repeat;
+    line-height: 16px;
+    padding-left: 30px;
+}
+
+td.errors select {
+    border: 1px solid red;
+}
+td.errors input {
+    border: 1px solid red;
+}
+
+/* TABLES */
+
+table {
+    border: 1px solid #ccc;
+    width: 100%
+}
+tr {
+    border: 0;
+}
+td, th {
+    font: 11px verdana, arial, helvetica, sans-serif;
+    line-height: 12px;
+    padding: 5px 6px;
+}
+th {
+    background: #fff url(/MKT/images/skin/shadow.jpg);
+    color: #666;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 17px;
+    padding: 2px 6px;
+}
+th a:link, th a:visited, th a:hover {
+    color: #333;
+    display: block;
+    font-size: 10px;
+    text-decoration: none;
+    width: 100%;
+}
+th.asc a, th.desc a {
+    background-position: right;
+    background-repeat: no-repeat;
+}
+th.asc a {
+    background-image: url(/MKT/images/skin/sorted_asc.gif);
+}
+th.desc a {
+    background-image: url(/MKT/images/skin/sorted_desc.gif);
+}
+
+.odd {
+    background: #f7f7f7;
+}
+.even {
+    background: #fff;
+}
+
+/* LIST */
+
+.list table {
+    border-collapse: collapse;
+}
+.list th, .list td {
+    border-left: 1px solid #ddd;
+}
+.list th:hover, .list tr:hover {
+    background: #b2d1ff;
+}
+
+/* PAGINATION */
+
+.paginateButtons {
+    background: #fff url(/MKT/images/skin/shadow.jpg) bottom repeat-x;
+    border: 1px solid #ccc;
+    border-top: 0;
+    color: #666;
+    font-size: 10px;
+    overflow: hidden;
+    padding: 10px 3px;
+}
+.paginateButtons a {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-color: #ccc #aaa #aaa #ccc;
+    color: #666;
+    margin: 0 3px;
+    padding: 2px 6px;
+}
+.paginateButtons span {
+    padding: 2px 3px;
+}
+
+/* DIALOG */
+
+.dialog table {
+    padding: 5px 0;
+}
+
+.prop {
+    padding: 5px;
+}
+.prop .name {
+    text-align: left;
+    width: 15%;
+    white-space: nowrap;
+}
+.prop .value {
+    text-align: left;
+    width: 85%;
+}
+
+/* ACTION BUTTONS */
+
+.buttons {
+    background: #fff url(/MKT/images/skin/shadow.jpg) bottom repeat-x;
+    border: 1px solid #ccc;
+    color: #666;
+    font-size: 10px;
+    margin-top: 5px;
+    overflow: hidden;
+    padding: 0;
+
+
+}
+
+.buttons input {
+    background: #fff;
+    border: 0;
+    color: #333;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: bold;
+    margin-left: 3px;
+    overflow: visible;
+    padding: 2px 6px;
+}
+.buttons input.delete {
+    background: transparent url(/MKT/images/skin/database_delete.png) 5px 50% no-repeat;
+    padding-left: 28px;
+}
+.buttons input.edit {
+    background: transparent url(/MKT/images/skin/database_edit.png) 5px 50% no-repeat;
+    padding-left: 28px;
+}
+.buttons input.save {
+    background: transparent url(/MKT/images/skin/database_save.png) 5px 50% no-repeat;
+    padding-left: 28px;
+}
+.buttons input.next, input.cancel, input.prev {
+    border-width:1px;
+    border-color:#CCCCCC #AAAAAA;
+    border-style: solid;
+}
+
+.actionBox {
+    float:left;
+    width:300px;
+    margin:10px;
+    padding:0px;
+    min-height: 140px;
+	border:dotted 1px #dcdcdc;
+}
+*html .actionBox {
+	height: 140px;
+}
+
+.actionTitle {
+    background: #fff url(/MKT/images/skin/shadow.jpg) bottom repeat-x;
+    border: 1px dotted #6F1200;
+    border-style: solid none solid none;
+    padding: 7px 12px;
+    margin-bottom:0px;
+    font-weight:bold;
+    font-size:110%
+}
+
+.actionSubTitle {
+    color:#6F1200;
+    padding: 7px 12px;
+    margin-bottom:0px;
+    font-weight:bold;
+    font-size:100%
+}
+
+.actionItem {
+    padding:3px 12px;
+    background: url(/MKT/images/tree/bullet.gif) left no-repeat;
+    margin-left:15px;
+}
+
+.actionCancel {
+    padding:8px 25px;
+    background: url(/MKT/images/cancel.png) left no-repeat;
+    margin-left: 15px;
+}
+
+.actionEdit {
+    padding:8px 25px;
+    background: url(/MKT/images/edit.png) left no-repeat;
+    margin-left: 15px;
+}
+
+.actionOrder {
+    padding:8px 25px;
+    background: url(/MKT/images/order.png) left no-repeat;
+}
+
+.actionAdd {
+    padding:8px 25px;
+    background: url(/MKT/images/add.png) left no-repeat;
+    margin-left: 15px;
+}

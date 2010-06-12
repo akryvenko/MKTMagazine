@@ -9,7 +9,17 @@
 <body>
 <div class="body">
     <h1>Список замовлень</h1>
-
+    <form action="<c:url value="/welcome.do"/>">
+        <select id="statusFilter" name="statusFilter">
+            <option value="opened">Всі активні</option>
+            <option value="all">Всі замовлення</option>
+            <option value="closed">Всі закриті</option>
+            <option value="canceled">Всі скасовані</option>
+        </select>
+               <span class="button">
+                       <input type="submit" value="Фільтрувати"/>
+               </span>
+    </form>
     <div class="list">
         <table>
             <thead>
