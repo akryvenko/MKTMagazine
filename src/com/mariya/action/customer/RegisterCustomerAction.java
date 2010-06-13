@@ -16,13 +16,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.math.BigDecimal;
 
-/**
- * Created by IntelliJ IDEA.
- * User: user
- * Date: 27.05.2010
- * Time: 1:40:59
- * To change this template use File | Settings | File Templates.
- */
 public class RegisterCustomerAction extends BaseAction {
 
     private CustomerDAO customerDAO;
