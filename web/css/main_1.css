@@ -50,7 +50,7 @@ img, img a {
 	height: 272px;
 	width: 960px;
 	overflow: hidden;
-	/*background: transparent url(images/background_header.jpg) top center no-repeat;*/
+	/*background: transparent url(/MKT/images/background_header.jpg) top center no-repeat;*/
 	margin-bottom: 10px;
 }
 
@@ -71,12 +71,21 @@ h2.filter_title {
 	font-weight: normal;
 }
 
+#leaderboard {
+	position: absolute;
+	width: 728px;
+	height: 90px;
+	top: 167px;
+	left: 117px;
+	padding: 0px;
+	margin: 0px;
+	text-align: center;
+}
+
 #loginform {
 	position: absolute;
-	width: 250px;
     height: 20px;
 	top: 3px;
-	left: 500px;
     font-size: 12px;
 	font-family: Helvetica, Arial, sans-serif;
 	font-weight: bold;
@@ -138,32 +147,43 @@ ul.nav li{
 
 #content{
 	float: left;
-	width: 648px;
-	min-height: 500px;
+	width: 765px;
+	height: 500px;
 	background-color: #ffffff;
 	padding: 10px;
 	border: 1px solid #c8c6ba;
+    overflow: auto;
 }
+
+#contentCenter{
+	float: left;
+	width: 623px;
+	height: 500px;
+	background-color: #ffffff;
+	padding: 10px;
+	border: 1px solid #c8c6ba;
+    overflow: auto;
+}
+
 
 #leftBar {
 	float: left;
-	width: 100px;
+	width: 120px;
+    height: 500px;
 	background-color: #ffffff;
 	border: 1px solid #c8c6ba;
-	padding: 10px 10px 0px;
+	padding: 10px 10px 10px;
+    overflow: auto;
 }
-
-#leftBar ul {
-	margin-bottom: 10px;
-}
-
 
 #messagebar {
 	float: left;
-	width: 125px;
+	width: 150px;
 	background-color: #ffffff;
 	border: 1px solid #c8c6ba;
-	padding: 10px 10px 0px;
+	padding: 10px 10px 10px;
+    height: 500px;
+    overflow: auto;
 }
 
 #messagebar ul {
@@ -742,4 +762,9 @@ th.desc a {
     padding:8px 25px;
     background: url(/MKT/images/add.png) left no-repeat;
     margin-left: 15px;
+}
+
+.category {
+    padding:8px 25px;
+    background: url(/MKT/images/category.png) left no-repeat;
 }
