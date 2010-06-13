@@ -56,6 +56,9 @@
             <field property="count" depends="required">
                 <arg position="0" key="new.product.form.product.count"/>
             </field>
+            <field property="category" depends="required">
+                <arg position="0" key="new.product.form.product.category"/>
+            </field>
         </form>
         <form name="employerForm">
             <field property="firstName" depends="required">
